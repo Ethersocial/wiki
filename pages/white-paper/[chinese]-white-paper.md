@@ -1,483 +1,437 @@
-## Decentralized forum application platform using smart contract
+## 基于智能合约的去中心化论坛应用程序平台
 
-Bitcoin, of which the blocks were first generated in January 2009, brought up global currency innovation. This was the first case to actually utilize blockchain and to move away from the traditionally non-reliable network to trust-based innovation using blockchain as the Bitcoin ledger, and eventually to bring about currency innovation. Since then, the use of Bitcoin has been steadily growing along with its technology development.
+2009年1月，首次生成区块的比特币在全世界掀起了货币改革。区块链作为区块链的最初使用及比特币帐本。是在之前无法信赖网络上利用值得信赖的区块链引起货币改革的第一个例子。之后随着持续地利用其技术也随之发展了起来。
 
-Whereas Bitcoin focused on the most basic functions of blockchain, the stable transfer and storage functions as a currency, Ethereum of which the first block was generated in 2015, added private contract on top of its transferring function. The first smart contract function was used to enable private contract on blockchain without the intervention of a third party. 
+如果说比特币是集中于区块链的最基本功能——货币的稳定传送与保管，那么2015年生成第一个区块的以太坊是在传送的基础上添加了私人合约的功能。而且是最初使用智能合约功能，将私人合约在没有第三者的情况下的区块链上完成签约的。
 
-Ethereum, also called blockchain 2.0 following Bitcoin, is a blockchain with a perfect turing-complete programming language embedded. This programming language allows users to directly build private contracts according to given rules. This contract not only includes literal contracts but also the generation of contracts in the concept of 'generating tokens' under conditions that meet the rules of ERC-20. By using the condition of being an Ethereum contract, it is possible to issue and transfer other coins on the Ethereum blockchain network, and already countless numbers of tokens are run on the Ethereum platform.
+以太坊继比特币被称为区块链2.0，它是内置图灵完备编程语言的区块链。其编程语言是使用者可以根据规定直接制定私人合约（contracts）。此合约虽有着合约上的意思，但还有着满足ERC-20规定的条件里生成“代币生成”概念的合约意思。利用以太坊合约的条件，可以实现以太坊区块链网络异常或其他货币的发行及传送，此外许多代币在以太坊的平台上运行。
 
-Ethereum is a continuously developing blockchain that demonstrates tremendous advancement. However, there are still many limitations for general users and application developers to actually apply its functions. Also, it is very much complicated for various social networks, communities and game websites to develop their own coins.
+以太坊以不断发展的区块链展现了非凡的功能。但目前为止对于普通使用者与开发各种应用程序的开发者来说有很多限制。此外在各种社交网络、社群、游戏网站上自主开发货币是件非常难的事。
+以太坊社交网(ESN)提供API功能，其功能包括遵守ERC-20智能合约规定来点击几下便生成代币的管理工具和各种服务。管理各种网站的管理者可利用其功能独自企划、制作、生成、传送、管理及消灭代币。
 
-EtherSocial provides management tools that can generate tokens complying with the ERC-20 smart contract rules with a couple of clicks as well as API functions that are applied to various services. Through EtherSocial, website administrators can plan, make, create, transfer, manage and burn their own tokens.
- 
+### 目录
 
-### Table of Contents
-
-### Table of Contents
-
-- [History](https://github.com/ethersocial/wiki/wiki/White-Paper#history)
-  * [Introduction of Bitcoin](https://github.com/ethersocial/wiki/wiki/White-Paper#introduction-of-bitcoin)
-  * [Limitations of Bitcoin](https://github.com/ethersocial/wiki/wiki/White-Paper#limitations-of-bitcoin)
-  * [Introduction of Ethereum](https://github.com/ethersocial/wiki/wiki/White-Paper#introduction-of-ethereum)
-  * [Limitations of Ethereum](https://github.com/ethersocial/wiki/wiki/White-Paper#limitations-of-ethereum)
-  * [Introduction of Steem coin](https://github.com/ethersocial/wiki/wiki/White-Paper#introduction-of-steem-coin)
-  * [Limitations of Steemit](https://github.com/ethersocial/wiki/wiki/White-Paper#limitations-of-steemit)
-- [Bitcoin and its basic concept](https://github.com/ethersocial/wiki/wiki/White-Paper#bitcoin-and-its-basic-concept)
-  * [Basic concept of reserves](https://github.com/ethersocial/wiki/wiki/White-Paper#basic-concept-of-reserves)
-  * [Mining](https://github.com/ethersocial/wiki/wiki/White-Paper#mining)
-- [EtherSocial](https://github.com/ethersocial/wiki/wiki/White-Paper#ethersocial)
-  * [EtherSocial account](https://github.com/ethersocial/wiki/wiki/White-Paper#ethersocial-account)
-  * [Message and Transaction](https://github.com/ethersocial/wiki/wiki/White-Paper#message-and-transaction)
-  * [Messages(Messages)]( https://github.com/ethersocial/wiki/wiki/White-Paper#messages)
-  * [Blockchain and Mining](https://github.com/ethersocial/wiki/wiki/White-Paper#blockchain-and-mining)
-- [Applications](https://github.com/ethersocial/wiki/wiki/White-Paper#applications)
-  * [Token Systems](https://github.com/ethersocial/wiki/wiki/White-Paper#token-systems)
-- [Application process of incentivized communities](https://github.com/ethersocial/wiki/wiki/White-Paper#application-process-of-incentivized-communities)
-  * [Requirements for commercialization of coins](https://github.com/ethersocial/wiki/wiki/White-Paper#requirements-for-commercialization-of-coins)
-  * [Coin features to vitalize forum](https://github.com/ethersocial/wiki/wiki/White-Paper#coin-features-to-vitalize-forum)
-  * [Essential factors of the forum to utilize coins](https://github.com/ethersocial/wiki/wiki/White-Paper#essential-factors-of-the-forum-to-utilize-coins)
-  * [Expansion functions to various forums such as games](https://github.com/ethersocial/wiki/wiki/White-Paper#expansion-functions-to-various-forums-such-as-games)
-  * [APIs required for actual application](https://github.com/ethersocial/wiki/wiki/White-Paper#apis-required-for-actual-application)
-- [Development plan for reward-type contents forum]( https://github.com/ethersocial/wiki/wiki/White-Paper#development-plan-for-reward-type-contents-forum)
-  * [General forms of current forums](https://github.com/ethersocial/wiki/wiki/White-Paper#general-forms-of-current-forums)
-  * [Development direction](https://github.com/ethersocial/wiki/wiki/White-Paper#development-direction)
-  * [Active profit sharing](https://github.com/ethersocial/wiki/wiki/White-Paper#active-profit-sharing)
-- [Reward program for EtherSocial developers](https://github.com/ethersocial/wiki/wiki/White-Paper#reward-program-for-ethersocial-developers)
-  * [Scope of reward program](https://github.com/ethersocial/wiki/wiki/White-Paper#scope-of-reward-program)
-  * [Operation of reward program](https://github.com/ethersocial/wiki/wiki/White-Paper#reward-program)
-- [Roadmap](https://github.com/ethersocial/wiki/wiki/White-Paper#roadmap)
-- [Other issues](https://github.com/ethersocial/wiki/wiki/White-Paper#other-issues)
-  * [Introduction of uncle blocks](https://github.com/ethersocial/wiki/wiki/White-Paper#introduction-of-uncle-blocks)
-  * [Fees](https://github.com/ethersocial/wiki/wiki/White-Paper#fees)
-  * [Currency and Issuance](https://github.com/ethersocial/wiki/wiki/White-Paper#currency-and-issuance)
-  * [Mining Centralization](https://github.com/ethersocial/wiki/wiki/White-Paper#mining-centralization)
-- [Conclusion](https://github.com/ethersocial/wiki/wiki/White-Paper#conclusion)
+- [历史（History）](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E5%8E%86%E5%8F%B2history)
+   * [比特币简介](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E6%AF%94%E7%89%B9%E5%B8%81%E7%AE%80%E4%BB%8B)
+   * [比特币的极限](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E6%AF%94%E7%89%B9%E5%B8%81%E7%9A%84%E6%9E%81%E9%99%90)
+   * [以太坊简介](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E4%BB%A5%E5%A4%AA%E5%9D%8A%E7%AE%80%E4%BB%8B)
+   * [以太坊的极限](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E4%BB%A5%E5%A4%AA%E5%9D%8A%E7%9A%84%E6%9E%81%E9%99%90)
+   * [虚拟货币简介](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E8%99%9A%E6%8B%9F%E8%B4%A7%E5%B8%81%E7%AE%80%E4%BB%8B)
+   * [Steemit的极限](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#steemit%E7%9A%84%E6%9E%81%E9%99%90)
+- [比特币与基本概念](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E6%AF%94%E7%89%B9%E5%B8%81%E4%B8%8E%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5)
+   * [基本概念整理](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E7%9A%84%E6%95%B4%E7%90%86)
+   * [挖矿](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E6%8C%96%E7%9F%BF)
+- [以太坊社交网](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E4%BB%A5%E5%A4%AA%E5%9D%8A%E7%A4%BE%E4%BA%A4%E7%BD%91)
+   * [以太坊社交网的账户](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E4%BB%A5%E5%A4%AA%E5%9D%8A%E7%A4%BE%E4%BA%A4%E7%BD%91%E7%9A%84%E8%B4%A6%E6%88%B7)
+   * [消息与交易](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E6%B6%88%E6%81%AF%E4%B8%8E%E4%BA%A4%E6%98%93)
+   * [消息（Messages）](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E6%B6%88%E6%81%AFmessages)
+   * [区块链与挖矿（Blockchain and Mining）](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E5%8C%BA%E5%9D%97%E9%93%BE%E4%B8%8E%E6%8C%96%E7%9F%BFblockchain-and-mining)
+- [应用程序（Applications）](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8Fapplications)
+   * [代币系统（Token Systems）](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E4%BB%A3%E5%B8%81%E7%B3%BB%E7%BB%9Ftoken-systems)
+- [补偿型社交的适用过程](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E8%A1%A5%E5%81%BF%E5%9E%8B%E7%A4%BE%E4%BA%A4%E7%9A%84%E9%80%82%E7%94%A8%E8%BF%87%E7%A8%8B)
+   * [货币事业化过程中所需部分](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E8%B4%A7%E5%B8%81%E4%BA%8B%E4%B8%9A%E5%8C%96%E8%BF%87%E7%A8%8B%E4%B8%AD%E6%89%80%E9%9C%80%E9%83%A8%E5%88%86)
+   * [为激活论坛的货币特征](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E4%B8%BA%E6%BF%80%E6%B4%BB%E8%AE%BA%E5%9D%9B%E7%9A%84%E8%B4%A7%E5%B8%81%E7%89%B9%E5%BE%81)
+   * [为使用货币的论坛必要条件](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E4%B8%BA%E4%BD%BF%E7%94%A8%E8%B4%A7%E5%B8%81%E7%9A%84%E8%AE%BA%E5%9D%9B%E5%BF%85%E8%A6%81%E6%9D%A1%E4%BB%B6)
+   * [拓展到游戏以外各种论坛的功能](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E6%89%A9%E5%B1%95%E5%88%B0%E6%B8%B8%E6%88%8F%E4%BB%A5%E5%A4%96%E5%90%84%E7%A7%8D%E8%AE%BA%E5%9D%9B%E7%9A%84%E7%9A%84%E5%8A%9F%E8%83%BD)
+   * [为实际适用所需的API](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E4%B8%BA%E5%AE%9E%E9%99%85%E9%80%82%E7%94%A8%E6%89%80%E9%9C%80%E7%9A%84api)
+- [补偿型内容论坛的开发计划](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E8%A1%A5%E5%81%BF%E5%9E%8B%E5%86%85%E5%AE%B9%E8%AE%BA%E5%9D%9B%E7%9A%84%E5%BC%80%E5%8F%91%E8%AE%A1%E5%88%92)
+   * [现论坛的一般形式](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E7%8E%B0%E8%AE%BA%E5%9D%9B%E7%9A%84%E4%B8%80%E8%88%AC%E5%BD%A2%E5%BC%8F)
+   * [开发方向](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E5%BC%80%E5%8F%91%E6%96%B9%E5%90%91)
+   * [积极的收益分配](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E7%A7%AF%E6%9E%81%E7%9A%84%E6%94%B6%E7%9B%8A%E5%88%86%E9%85%8D)
+- [为以太坊社交网开发者的补偿项目](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E4%B8%BA%E4%BB%A5%E5%A4%AA%E5%9D%8A%E7%A4%BE%E4%BA%A4%E7%BD%91%E5%BC%80%E5%8F%91%E8%80%85%E7%9A%84%E8%A1%A5%E5%81%BF%E9%A1%B9%E7%9B%AE)
+   * [补偿项目的范畴](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E8%A1%A5%E5%81%BF%E9%A1%B9%E7%9B%AE%E7%9A%84%E8%8C%83%E7%95%B4)
+   * [补偿项目运营](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E8%A1%A5%E5%81%BF%E9%A1%B9%E7%9B%AE%E8%BF%90%E8%90%A5)
+- [路线](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E8%B7%AF%E7%BA%BF)
+- [其他焦点](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E5%85%B6%E4%BB%96%E7%84%A6%E7%82%B9)
+   * [引入叔叔区块](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E5%BC%95%E5%85%A5%E5%8F%94%E5%8F%94%E5%8C%BA%E5%9D%97)
+   * [手续费](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E6%89%8B%E7%BB%AD%E8%B4%B9)
+   * [通货与发行（Currency and Issuance）](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E9%80%9A%E8%B4%A7%E5%8F%8A%E5%8F%91%E8%A1%8Ccurrency-and-issuance)
+   * [挖矿中心集中化（Mining Centralization）](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E6%8C%96%E7%9F%BF%E4%B8%AD%E5%A4%AE%E9%9B%86%E4%B8%AD%E5%8C%96mining-centralization)
+- [结论](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E7%BB%93%E8%AE%BA)
 
 
-## History 
 
-### Introduction of Bitcoin
+## 历史(History) 
 
-The first digital currency, Bitcoin, was first suggested in the thesis of Satoshi Nakamoto in 2008 under the title 'Bitcoin: A Peer-to-Peer Electronic Cash System'. Nakamoto realized the transfer and storage of coins adopting the blockchain technology. Blockchain was suitable to be used as a financial transaction ledger, as previous data could not be modified and the issue of double spending could be prevented. It is difficult to forge or falsify blocks as hash information that requires lots of computing power for calculation is recorded in each block. Time is also recorded in each block and as blocks refer to the immediate previous block, all blocks would have to be forged, making it realistically impossible. There are opinions that implementation of a quantum computing could pose a serious level of threat to Bitcoin, however this would only be possible after more than a decade, meaning that this is a fully safe system at least for the foreseeable future. 
-Despite the absence of a central administrator for Bitcoin, about 500,000 blocks have been generated since the creation of the genesis block on January 9, 2009 without any hacking on the Bitcoin itself, boasting a sound level of security. A daily average of 230,000 transactions take place through Bitcoin and a market capitalization of more than 200 trillion Korean Won was recorded.
-As for Bitcoins, new blocks are generated through Proof of Work (PoW). The first cryptocurrency was made through the collaboration of voluntary miners even without the existence of central control or intermediary. To use the credit card, the most popular payment method in the modern society or for overseas remittance, a central server was required. A reliable institution such as a 'bank' or 'credit card company' that can prove that I have sent the money, was essential. Bitcoin enabled the transfer and storage of coins without a third party, making it truly a breakthrough innovation never imagined before.
+### 比特币简介
 
+最初的虚拟货币——比特币是2008年，中本聪（Satoshi Nakamoto）在论文《比特币：个人间的电子结算系统（Bitcoin: A Peer-to-Peer Electronic Cash System)》中首次提及到。中本聪引入区块链实现了货币的传送与保存。因区块链不可修改之前的数据而可防止了双重支付的问题，所以非常适合作为金融交易的账本。每个区块中记录了要求大量的计算机运算能力的哈希信息，所以很难伪造和造假。并且区块记录着时间，还需参考之前的区块，若想伪造还应伪造所有的区块，所以这在现实中是不可能的。虽说量子计算机开发会威胁比特币，但这一主张可能会在10年后才有可能实现，因此就目前来看比特币是一个非常安全的体系。                                                                    比特币在没有中央管理者的情况下，2009年1月9日生成了创始区块。之后约生成500，000个区块时，从未出现过被盗现象，这说明了它拥有着十分坚固的安全体系。利用比特币的交易数量每天平均达到了23万件，并创下了220万亿元的时价总额。                                                      比特币是通过工作证明的过程来生成新的区块。在没有中央统治或中介的情况下，凭挖矿者的积极合作制作出了第一个加密货币。在现代社会最普遍的结算手段信用卡或国外汇款必须通过中央系统，并且为了证明汇款人必须有“银行”或“信用卡公司”等信用机关来证明。但比特币在没有那些第三者的情况下，正常传送或保存了货币，这在过去是难以想象的事实。
 
-### Limitations of Bitcoin
+### 比特币的极限
 
-There have been upgrades of the Bitcoin through continuous modification of codes. However, as it has been quite a while since the first development of the Bitcoin and because it is the first cryptocurrency, Bitcoin has some obvious limitations. 
-It takes more than ten minutes for the transfer of Bitcoin, as a block is generated once every ten minutes. Also, because the value of 1BTC is excessively high, it is not easy to use it as a means for payment in actual life. 
-Bitcoin is a public blockchain and its transaction list is open to the public. As it is open to the public, Bitcoin is transparent and cannot be manipulated, but its weakness is that it cannot hide secrets. Many users who own large amount of BTCs may not want to expose their BTCs. Also, there are people who want to hide their transaction details. To overcome such limitations, coins with anonymity functions such as the Zcash or Monero have emerged. 
-Another important limitation would be that it is difficult to use the Bitcoin in areas other than the transaction of coins. The language called 'Script' used in Bitcoin only allows limited functions as there are no repetitive statements. Against this background emerged Ethereum, to go beyond its limits and to be expanded to other domains, not confined to the transaction of cryptocurrency.
+为了比特币升级不断进行了代码修改。尽管如此，比特币从开发到现在已过了很长时间，也因是最初的加密货币遇到了极限。                                                                      比特币传送所需时间为10分钟左右。其原因是每个区块生成时间为10分钟。而且1BTC的价格过高，很难在实际生活中使用。                                                                        比特币作为公链（Public Blockchain）空开所有的交易目录。因为对每个人都公开所以不能作假，但缺点就是不能保守秘密。拥有大量比特币的使用者不愿意公开自己的比特币。而且还有些人想隐藏汇款明细。为了克服这些缺点，不断出现了引进匿名性功能的零钞（Zcash）、门罗币（Monero）等。     此外，最主要的极限就是比特币除接收与传送货币外，很难在别的领域使用。在比特币中使用的“脚本（Script）”语言虽没有出现重复但也具有限制的功能。所以为了克服这些缺点推出了以太坊。以太坊不仅实现了加密货币的接收与传送，而且还扩展到了其他领域。
 
+### 以太坊简介
 
-### Introduction of Ethereum
+2014年，以太坊进行了ICO后，2015年推出了最新版本。以太坊是利用区块链实现智能合约（Smart Contract）的平台。若智能合约利用数字命令制定合约，那么它会根据条件自动履行其内容。利用以太坊可便捷地制作分布式应用程序（ DApps ），它可以将区块链拓展到各个领域。                     以太坊的使用者生成“代币”后，可用于自己想用的地方。若有新的代币生成，区块链也很容易生成，并且可以将接收与传送、钱包、探索器等提供给制作代币的使用者。代币和比特币的差异就是比特币拥有自己的网络，与此相反，代币却借着其他货币的网络而制作和运行。但它们的共同点是可以接收与传送并记录在区块链上。                                                                      基于以太坊现已制作出了433个代币，并且以货币种类为基准，并占据代币市场的81%。利用以太坊的代币不需中介就可实现与多个投资者的云基金。2017年6月，在区块链领域通过ICO投资的金额首次超过了由风险资金投资的金额。小投资者通过ICO实现了以小资金难以在尖端IT风险企业和项目中的投资并获得了利益。此外，对于那些拥有点子和技术力，但缺少资金的个人和团体来说这成为了融资的新的手段。以太坊的最大危机就是DAO攻击事件。智能合约就像双刃剑虽具有一般性，但因快速发展缺乏了安全性。正因这一缺点受到了DAO攻击事件，便成为了以太坊硬分叉。这些安全问题在一定程度上已经处理地完善了。并且2016年发生DAO攻击事件后，在以太坊平台上实现了许多ICO，但没有发生重大的安全问题。就目前的以太坊编码已通过了几年以上的稳定性和检验测试，因此具有安全性。
+                                                              
+### 以太坊的极限
 
-ICO (Initial Coin Offering) of Ethereum took place in 2014 and the first version was released in 2015. Ethereum was a platform that actually realized the concept of 'smart contract' using blockchain. The concept of smart contract is that when a contract is created with digital commands, the terms of the contract are automatically executed according to the conditions.  DApps or decentralized applications that extend blockchain to various domains can be made easily than before using Ethereum. 
-Ethereum users can generate a 'token' and use it for whatever purpose of the user. Once a new token is generated, the blockchain will be easily generated as well and transaction, wallet and explorer is given to the user who generated the token. The major difference between a token and a coin is that a coin has its own network whereas a token is made and run on top of a network of another coin. The common thing is that both have the transaction function and are recorded in the blockchain. 
-Currently 443 tokens are made based on the Ethereum platform and those account for 81% of the token market based on the types of coins. Tokens utilizing Ethereum enabled crowdfunding with multiple investors without an intermediary, and for the first time in June 2017, the amount invested through ICO into blockchain surpassed the amount invested through venture capitals, demonstrating the energy of ICO. Through ICO, small investors who were not able to participate with small amount of investment could invest in high-tech IT venture companies and projects and realize profits. Also, individuals and groups that already had ideas and technological know-how but insufficient capital found a new way of financing.
-The most substantial risk to Ethereum was the DAO hack. Although smart contract was a double-edged sword that gave versatility, the rapid speed of development lowered the level of overall security. This resulted in the DAO hack and eventually led to the Hard Fork of Ethereum. Many of such security weaknesses are now substantially improved. Since the DAO hack in 2016, numerous ICOs took place on the Ethereum platform but no crucial security issues have ever occurred since then. Therefore, it is safe to say that the current Ethereum code has gone through years of stabilization and testing, and is now reliable.
+以太坊主要的问题是不能直接引进到一般的论坛上。为了引进以太坊的补偿体系应熟练操作智能合约语言——Solidity，还需理解区块链。以太坊中虽有API，但还没有专门的论坛中。因此区块链理解较低的网络开发者是很难理解的。若想在论坛上引进以太坊，会发生开发的时间与费用。所以说论坛上需要专业的加密货币，就跟利用以太坊开发和重新开发货币一样没有太大的差别。
 
+### 虚拟货币简介
 
-### Limitations of Ethereum
+虚拟货币是作为“Steemit”论坛的专用币，自2016年开始了交易。虚拟币的目标是生成论坛上使用的币。Steemit是由个人博客和留言的形式构成的，而且是以人们的好评得到补偿的一种体系。积极使用Steemit的个人使用者通过虚拟货币得到补偿，而且所拥有的虚拟货币的价值在交易所的升值的话，会拥有相当于其虚拟货币的利益。                                                                虚拟货币只提供论坛服务就拥有了60万名以上的使用者这已是成功的例子。在Steemit论坛上使用的虚拟货币的价格自2016年问世以来的一年8个月间里涨了6倍以上。    
+         
+### Steemit的极限
 
-The most important issue of Ethereum is that it is difficult to directly introduce Ethereum to the general forum. To introduce a reward system using Ethereum, one needs to be capable of fluently using the smart contract programming language called 'Solidity' and also have a good understanding of blockchain. APIs exist in Ethereum, but are not specialized for forum websites. Therefore, web developers with less understanding of blockchain have relatively lower accessibility. Therefore, if one would want to introduce Ethereum to the forum, additional time and expenses for development will follow. After all, if there is a need for a forum-specialized cryptocurrency, there may be no substantial difference between developing it using Ethereum and developing new coins from scratch.
+Steemit存在许多问题。首先在Steemit上传的主题非常受限制。在谷歌里搜索Steemit，出现的相关所搜词大部分是与货币和投资有关的主题。其理由是最初使用Steemit的使用者很难理解。但对加密货币感兴趣的人不管繁不繁琐，为了得到Steemit的补偿还是会积极注册。                             此外，别的缺点是无韩国型专门论坛。在韩国比起博客大部分人更加喜欢使用留言板。但Steemit扎根在海外，只支持个人博客形式。所以很难将现有的Steemit原版引入到韩国的留言板上。             此外还有个缺点是根据一部分货币拥有量者的意见来决定大部分的补偿。我们将拥有大量货币的人称为“鲸鱼”，若他们按一号“赞”，便可获得相当于300美元的货币。                              在谷歌里用英语搜Steemit，最先弹出的相关所搜词是haejin。虽然不能确定使用这个用户名的使用者是否为韩国人。但她每天会传10篇左右的帖子，每个帖子可获得300美元左右的利益。就是说一天能够获得相当于3000美元的货币补偿。对于一般使用者来说，由一张简单的图和一行字构成的帖子来获得300美元的补偿是不可能的事，所以Steemit的会员开始愤怒地留下差评。但haejin还是继续上传帖子，所以有些会员们担忧“是不是只给一名“鲸鱼”点赞、Steemit越来越不好了” 等问题。还有个问题就是虚拟货币虽已交易了2年，但API还未问世，还有计划在2018年推出的SMT代币还未发行。SMT代币与以太坊的ERC20代币相似，都是为自己论坛而制造的代币。但目前的虚拟货币成了专为Steemit论坛的货币。简单地说，虚拟货币是对加密货币感兴趣的人的货币，其中是专为Steemit会员的货币。 
+         
+                                                                
+## 比特币与基本概念
 
-### Introduction of Steem coin
+### 基本概念的整理
+为了完成数字货币这一概念，一般要达到安全的保存、转移与对更改内容的检验等两个目标。除了安全性还应具备匿名性才能称得上加密货币。为满足匿名性与稳定性的条件，在公钥加密方式的所有权管理算法的基础上，附加了区块链的账本节点与工作证明的安全流程，继而实现了不从属于特定集团的单纯完美的安全结构。                                                                         参与者仅通过“演算能力”的方式参与区块链的解密工作，我们将此称为“挖矿”。挖矿在区块链中担当着最基本的安全与交易处理，是一种所有参与区块链的参与者都可获得补偿的独特的结构。因此没有挖矿者的区块链的（除留言板方式）交易或转移会无法成立或极其慢。
 
-Steem coin is a forum-specific coin of 'Steemit', of which sales began in 2016. The purpose of Steem coin is to generate coins that can be used across the forum. Steemit is composed of personal blogs and comments, and users who give good comments to postings obtain rewards. Individual users who frequently use Steemit can be rewarded through Steem coins. If the value of the user's Steem coin increases in the exchange, the user is bound to acquire additional profits as much as the amount of Steem coin the user owns. 
-The Steem coin forum service itself was successful enough to have acquired more than 600,000 users. The value of Steem, the digital currency used in the Steemit forum, increased by more than six times for a year and eight months, since its launch in April 2016.
-
-
-### Limitations of Steemit
-
-However Steemit also bears many issues. First of all, the subjects uploaded on Steemit are quite limited. Based on Google's related search results, most of the postings of users that appear as related search results for Steemit were subjects related to coin or investment. It is because of the difficult accessibility for first-time Steemit users. However, people interested in cryptocurrency actively join Steemit to get its rewards despite the inconveniences. 
-Another shortcoming is that Steemit is not specialized for Korean forums. In Korea, forums tend to use bulletin boards rather than blogs. But Steemit has its roots in an overseas website and only supports personal blog formats, making it difficult to introduce Steemit as it is to Korean type bulletin boards. Another issue is that most of the rewards are determined according to the opinions of a few, who own large amount of coins. Those who own lots of coins are the so-called 'whales' on Steemit and their one click of 'like' could lead to a coin reward equivalent to 300 USD. 
-If one would search 'Steemit' on Google, the first related keyword that appears would be 'haejin'. It is not sure whether the user of this ID is a Korean, but this user usually posts ten postings a day and receives a profit of about 300 USD for each posting, resulting in 3,000 USD worth of coin rewards a day. Earning a reward of 300 USD for a single posting with one simple illustration and one line of text seemed impossible to the general Steemit users, which in turn made Steemit users to furiously click on the ‘un-vote’ tab. Nevertheless, 'haejin' keeps on with the posting and some users express concerns that 'only one whale is taking up everything. Steemit is getting out of order'. Another issue is that it has already been two years since the transaction of Steem coins, but there is no official launch of the API yet. Moreover, issuance of the SMT tokens which were planned to be released in 2018, did not happen either. SMT tokens are similar to the ERC 20 tokens and have a function of creating token for one's own forum. Eventually, the current Steem coin remains as a coin just for the Steemit forum. In summary, Steem coin became a coin just for the users who are interested in cryptocurrency, particularly for those using the Steemit forum.
-
-
-## Bitcoin and its basic concept
-
-### Basic concept of reserves
-To complete the concept of digital currency, basically two goals have to be achieved. First is the safe storage and transfer, second is the verification of altered contents. Also, cryptocurrency is only complete when it is safe and anonymous at the same time. To satisfy these requirements, simple and complete security was achieved without being subordinate to specific groups. This was enabled through the nodes of the ledger called blockchain and a security process called Proof of Work (PoW) on top of the ownership management algorithm based on public key encryption. 
-Participants can take part in cracking down the codes of such blockchain only through 'computational capability' and this is the so-called 'mining' process. Mining creates a unique structure in which it deals with basic security and processing of transactions and also enables blockchain rewards to all participants. Therefore, transaction or transfer will not take place or be extremely slow on a blockchain (excluding the PoS) without a miner.
- 
-
-### Mining
+### 挖矿
 
 ![](https://ethersocial.org/images/forum_activation_eng.png)
 
-The structure of blockchain is very simple. The concept is about 'whether the first block is normal' and 'whether every subsequent block is normal'. All we need to do is to check whether the newly created blockchain is created normally, and if this process is continued, we will be able to have all our assets and transactions in one blockchain.
+区块链的结构十分单一。这里只有“最初的区块是否为正常”、“之后生成的每一个区块是否为正常”的概念。我们只需监督每次生成的区块是否为正常，将这些区块一个个连起来就成了一条区块链，这里包含着有所有权和交易。
 
-1. The first block and previous blocks agreed by all parties
-2. Verification of a mix of transactions without errors
-3. Generation of a whole block
-4. Appropriate level of verification and relevancy of verification
+1. 达成协议的最初区块与之前的区块
+2. 检验无误差的每个交易的组合
+3. 生成完整的区块
+4. 适当难易度的检验与检验的适当性
 
-Starting from a block of which past verification is completed, a miner just has to do the best to generate a complete and safe block. To obtain coin rewards, the miner is willingly providing his or her computational ability, and at the same time maintaining the security level of the blockchain. To hack the blockchain, one needs to deal with the computational ability of mining. Of course such mining consumes lots of energy and resources. Although this is an issue to be improved in the long-term, it still is the most effective security maintenance method. EtherSocial follows the GPU mining method.
-
-
-## EtherSocial
-
-The purpose of EtherSocial is to create APIs and management tools that could be applied to actual services using the decentralized application protocol. Ethereum itself is a developing blockchain that provides an essential and fundamental platform of blockchain embedded with the turing-complete language, but the following shortcomings make it hard to apply it to actual services.
-1. Constant development
-    * Constant development is a good phenomenon. But because development happens constantly, there were many times when security issues related to Ethereum account and others occurred in the meantime. It is important to have a stable version without any of these security issues.
-2. General users or developers do not have easy accessibility 
-    * Since development is done mainly focusing on the functional improvement of Ethereum core, there are major shortcomings in the user environment. This is why it is almost impossible to apply it to general services as of now.
-3. Too much network traffic
-    * The network is always crowded with endless development and various tests going on. This is why the various smart contracts on the network are not successfully transferred in many cases.
-4. Expensive fees
-    * As the price of Ethereum itself has increased, the costs to realize smart contracts have become too high.
-
-The EtherSocial coin which aims to solve these issues have the following features.
-
-1. Only functions from the stable version are chosen out of the Ethereum functions. 
-    * Only the superior functions of the stable version are chosen and further developed. 
-2. Convenient usage
-    * GUI management tools are provided to enable easy access to general users. Also, applying a language frequently used by general developers in the development allows the convenient use of APIs and the coins to be actually applied to various types of services.
-3. By specializing in the token functions of ERC-20, usage of other smart contract functions are reduced and therefore the network runs more smoothly.
-4. Token management can be done with less fees and at a lower price than Ethereum.
+挖矿者从之前检验完毕的区块开始，为生成完整且安全的区块而付出努力。他为了得到补偿乐意地提供自己的计算能力，同时还维持区块链的安全。为了盗取区块链应与挖矿的计算能力竞争。当然挖矿会消耗大量电和资源。从长远的角度来看，这也是我们要改善的部分。但到目前为止是维持安全的最佳手段。此外以太坊社交网是根据GPU的挖矿方式。
 
 
-### EtherSocial account
+## 以太坊社交网
 
-ESN is used to pay the transaction fee as a fee to run the smart contract of EtherSocial. There are two types of accounts. The first is an external account that is controlled by a private key and the second is the contract account controlled by the contract code. The external account does not have any code, so to send a message from this account would require a new transaction and a signature. As for the contract account, whenever a message is received, a personal code will be activated to read and internally store the message. Afterwards, messages can be sent or contracts be generated. 
+以太坊社交网的目的是利用以太坊的分布式应用程序协议制作适用于实际服务的API和管理工具。以太坊本身是内置图灵完备语言的区块链，也是提供必要和最基本的基础而发展的区块链，但因存在以下缺点而不能运用于实际服务中。
+1. 不断进行开发。
+* 开发虽是件好事，但因不断进行，在此期间内发生过好几次有关以太坊程序等的安全性问题。所以需要安全的一种稳定的版本。
+2. 一般使用者或一般的开发者很难使用。
+* 以太坊开发是以改善核心功能为主的。因为在使用者环境中有着严重的缺点，所以目前适用于一般的服务不太现实。
+3. 网络通信量特别多。
+* 网络因不断发展与各种测试一直是繁忙状态。所以在此基础上无法传送各种智能合约情况也很多。
+4. 手续费昂贵。
+* 因以太坊本身的价格昂贵，所以为了实现智能合约的费用也跟着高了。
+为了解决上诉缺点，以太坊社交网（Ether Social）货币拥有以下特点。
 
+1. 以太坊的功能中，只取舍稳定版本的功能。
+* 取舍稳定版本的优秀功能来发展功能。
+2. 使用便利。
+* 为了一般使用者的便利使用将提供GUI管理工具。并且是以一般开发者经常使用的语言来开发，所以便捷了API的使用，从而将各种服务适用于其中。
+3. 特化了ERC-20代币的功能，减少使用其他智能合约的功能，使网络很顺畅。
+4. 可以低于以太坊的价格且较少的手续费管理代币。
 
-### Message and Transaction
+### 以太坊社交网的账户
 
-Transaction refers to the transferring details of EtherSocial and includes information of who sent what to whom. 
-Transactions include the following information.
+用启动以太坊社交网智能合约的手续费来支付交易手续费称为ESN。其账户中存在两种，一是通过私钥控制外部拥有账户，另一个是合约代码所控制合约账户。外部拥有账户没有任何代码，为了在这一账户中发送消息需制定新的交易。合约账户每当收到消息时，激活、读取自己的代码并记录到储存到内部储蓄空间内，而且发送其他消息或依次生成合约。
 
-* Recipient
-* Signature of the sender
-* Amount of ESN the sender is sending
-* Option data
-* Permitted calculation frequency
-* Calculation fee
+### 消息与交易
 
-Recipient, sender or the amount to be sent are items commonly used in most cryptocurrencies. Items such as the permitted calculation frequency and calculation fee perform the roles of blocking DDos attack in EtherSocial. 
-To prevent repetitive execution of transactions caused by mistake or limitless arithmetic carried out maliciously, ESN should be paid as a fee at each step when executing the code in the transfer of transactions. The basic unit is 1gas and if the transfer takes up more time or is complex, more fees should be paid. In this way, a malicious hacker would need to consume too many ESN for an attack which is less tempting for someone who holds lots of ESN. Thus, malicious attacks can be prevented more efficiently.
+交易是指以太坊社交网的传送内容，就是包含着发件人与收件人的所有信息。
 
+* 收件人
+* 发件人署名
+* 发件人的ESN量
+* 选项数据
+* 允许的运算次数
+* 计算手续费
 
-### Messages
+收件人、发件人、发送的量是大部分加密货币使用的共同项目。允许的运算次数和计算手续费的任务是防止以太坊社交网受到DDos的攻击。                                                          交易发送时，为了防止因失误而实施无数次或恶意地无限演算，在激活传送交易代码时，每个阶段都需将ESN作为手续费而支付。它的基本单位为1 gas，若传送过长或复杂的话，需支付更多手续费。这些恶意的攻击者为了攻击需消耗大量的ESN，很少人会恶意去引诱，所以可以有效防止恶意攻击。        
+                         
+### 消息（Messages）
 
-Transfer contract can call out other contracts using messages and then deliver information. In other words, smart contracts can be delivered using messages. 
-Messages include the following information.
+传送合约可以利用消息Call其他的合约来传递消息。就是说利用消息来传送智能合约。 
+此消息中包含以下内容。
 
-* Sender
-* Recipient
+* 发件人
+* 收件人
 * ESN
-* Option data
-* Permitted calculation frequency
+* 选项数据
+* 允许的运算次数
 
-Messages are similar to transactions except that messages are not from external accounts. Like transactions, messages will execute the relevant codes in the recipient account. The gas allocated to the transaction or contract is applied to the total amount of gas consumed due to all executions related to that transaction. For example, if an external account A sends 1000 gas and a transaction to B, and B sends a message to C after consuming 600 gas, and returns after consuming 300 gas for internal execution of C, B will be able to use 100 more gas before all gas is depleted.
+若消息除根据外部拥有账户的话与交易相似。如交易消息是在收件人的账户里激活该代码的。交易或合约获得的gas是根据与其交易相关的所有实行的消耗总gas而分配的。例如，外部拥有帐号A将1000gas和交易一起发送给B，B在消耗600gas后，将消息发送给C，那么C会根据内部实行消耗300gas后返还的话，B可以在gas消耗之前还可使用100gas。
 
+### 区块链与挖矿（Blockchain and Mining）
+以太坊社交网的区块链与前文所诉的比特币的区块链相似，但有几种差异。最大的差异是以太坊社交网的区块包含最新账户的状态、区块编号、难度等。比特币没有区块编码，所以若想知道区块编码需从第一个开始重新数。
 
-### Blockchain and Mining
-EtherSocial blockchain is similar to the previously explained Bitcoin blockchain, but is also different in many ways. The major difference is that unlike Bitcoin, EtherSocial blocks include the most recent state of the account, block number and difficulty. Since Bitcoin blocks do not have block numbers, one needs to start counting from the very first block to know the block number.
+以太坊社交网的最基本检验区块的方法如下。
 
-The following explains the basic methods of verifying EtherSocial blocks.
+1. 确认现有区块的存在和有效性。 
+2. 确认现有区块时间戳是否比之前区块的大，以现在为基准是否超过15分钟。
+3. 确认区块编号、难度、交易渠道、叔叔渠道、gas的限制
+4. 确认区块工作证明POW的有效性。
+5. 假设S[0]是之前区块最后状态（state）。
+6. 确认协议目录的错误、消耗的gas是否超过
+7. 检验支付给挖矿者的补偿区块。
 
-1. Check the existence and validity of the current block. 
-2. Check whether the timestamp of the current block is greater than the previous block and does not exceed 15 minutes as of the current time.
-3. Check the block number, difficulty, transaction route, uncle route and gas limits.
-4. Check the validity of Proof-of-Work (PoW) of the block.
-5. Assume that S[0] is the final state of the previous block.
-6. Check errors on the transaction list and whether the amount of consumed gas did not exceed the gas limit.
-7. Verify the reward block paid to the miner.
-
-It is very efficient to put all information into the block. Information will be stored in a tree structure and only a smart part of the tree behind all blocks will be altered. Unlike Bitcoin, as most contents of the tree are the same between the two adjacent blocks in EtherSocial, once stored data can be re-used again in the next block. On top of the concept of the Merkle tree, data can be input and deleted efficiently, and since information on the account's change of state is included in the last block, it is not necessary to store the whole blockchain information. 
-
-A smart contract is created when contract code of each transaction is executed at the same time when the blocks are being verified. 
-
-## Applications
-
-### Token Systems
-
-The blockchain token system has applications that realize many types of transaction systems on the network, from the sub-currency linked with US dollars or gold, smart property (assets of which the ownership is controlled/managed on the Bitcoin blockchain), secure and unforgeable coupons to other token systems (for example, point system to provide incentives) not linked with conventional value. The token system on EtherSocial can be realized in a surprisingly easy way. The following are the core parts in understanding the token system.
-
-* Currency and token systems execute only one function.
-* Currency/token of unit X is deducted from A, and the deducted currency/token of unit X is paid to B.  However, A should have held a minimum unit of X before the transaction.
-* A approves the transaction.
-
-In EtherSocial, the user just has to reflect the above logic to the contract. The basic codes that execute the token system in the Serpent are as the following.
-
-    def send(to, value):
-        if self.storage[msg.sender] >= value:
-            self.storage[msg.sender] = self.storage[msg.sender] - value
-            self.storage[to] = self.storage[to] + value
-
-In this case, the 'state transition function' of the banking system explained in this white paper is applied per se. To define the unit of the currency and do the initial work for distribution, or to enable other contracts to process information requests on the balance of accounts, additional lines of codes could be written. But that is all we need to make a token system. Theoretically, the token system as a sub-currency system based on EtherSocial may have an important feature the MetaCurrency (currency linked to the Bitcoin blockchain) based on Bitcoin does not have. It is that payment can be directly made with the currency used when trading the transaction costs. Such feature can be realized through the following process. To execute a contract, the ESN balance should be as much as the costs to be paid to the sender. And the internal currency that is received as a fee when executing the contract, can be immediately exchanged and charged as an EtherSocial balance. Although users have to 'activate' their accounts through the ESN, the amount obtained through each contract can be exchanged to ESN every occasion. This implies that a once-charged ESN can be re-used.
+将信息全部添加到区块的方法是非常有效率的。因为是以分支节点方式储存，只需改变所有区块后部分分支点的小部分。以太坊社交网与比特币不同的是连接的两个区块间大部分的分支点的内容都相同，所以只需将数据储存一次的话，在下一个区块中还可再次使用。加上根据默克尔帕特里夏树原理可有效添加或删除，并将账户状态变化存到最后一个区块中，所以不需储存所有区块链的信息。
+这样验证区块的同时，还可激活每个交易的代码而形成智能合约。
 
 
-## Application process of incentivized communities
-### Requirements for commercialization of coins
-EtherSocial was designed for the pay-type contents forum. It also brings contents creators of blogs to the forum. Coins can be applied to click-type reward, recommendation based reward and direct purchase for the contents without the server or DB approval, and can bind the contents from different servers working in different portals together. 
-Numerous coins are released with more than one role. Through the white paper that can utilize blockchain technology and various types of application software, we can observe the possibilities of that blockchain contributing to other fields. However, out of the vast number of coins, there are only a few that are commercialized according to the white paper, which arouses serious suspicions regarding the commercialization of coins and blockchain. We need to consider why there are less coins applied in the daily lives, despite the already verified and abundant security and transfer technologies in place and the possible distribution of numerous application software and contents.
+## 应用程序（Applications）
 
-1. First would be the gap between the blockchain ecosystem and the developers of general contents/software. Up to now, blockchain is considered to be in the realm of virtual currency and it is mainly the miners or investors who are interested rather than other software developers.
-2. Also, most of the investments in coins, like the ICO, are mostly interested in the stable launch of coins through effective marketing rather than the stable settle down of actual application software. Eventually the tendency is to first focus on the profits of existing investors by creating coins and going public on the market.
-3. There were a couple of efforts, however since blockchain is mainly focused on the owning and transferring aspect based on security, there is some animosity towards lowering the speed or reducing network resources by adding other functions. Nevertheless, coins should not only be owned or traded but more widely used by transacting with various application software and systems. There are concerns that continuous ICO and the flood of investment into new coins amid this situation could make the entire cryptocurrency ecosystem into a speculative ground. Therefore, this is the time when we need a case of integration and operation of actual software. 
+### 代币系统（Token Systems）
 
-Based on the existing cryptocurrency forum 'DDengle', EtherSocial begins its service from providing modules required for running an actual forum and collecting cases applied in the operation of forums. This is the outcome of excluding means to raise funds such as ICO, and transparently opening up all processes from mining to generating/distributing coins, as well as deriving the direction based on the agreement of collective intelligence.
+区块链代币系统（On-blockchain token system）从美元/金等联动的下一个单位的货币、股票、“智能资产* （Smart Property：在比特币的区块链上可以控制/管理所有权的资产）”、“无法伪造（ secure unforgeable ）”优惠券到没有与一般价值连接在一起的其他代币系统（例如给予奖金的积分制度）等拥有着将多种形式的交易体系在网络上实现的应用程序。在以太坊社交网上可以很容易地实现代币系统。理解代币体系的核心如下。
 
 
-### Coin features to vitalize forum
+* 货币或代币系统只能履行一种功能。
+* 从A主体减去X单位的货币/代币，将减去X单位的货币/代币支付给B。但交易前A应拥有最少量的X单位。
+* A确认了此交易。
 
-Forum administrators can set up a more extended reward system from the existing concept of mileage. Coins can be used as existing points or mileage within the forum and as rewards for external partner companies or advertising and marketing. Each forum coin that is made as a token provided by EtherSocial can be freely distributed, listed and traded. Further expansion is possible based on such liquidity.
+以太坊社交网中，使用者只需将之前的逻辑反映到合约中。“大蛇”实行代币系统的基本代码如下。
 
-1. Rewards can be provided directly to other forums and advertisers. In other words, a certain amount of coins will be distributed to the advertisers in advance, and the advertiser can provide the rewards directly to the customers.
-2. ESNrow services appropriate for P2P or secondhand trades can be provided. In other words, the deposit amount can be provided with the tokens, and as soon as the deal is approved, the tokens can be liquidated or the tokens can be traded again.
-3. In particular, providing additional rewards for game ranking is also possible. By using tokens when partnering with external game companies, forum users can be easily brought to the game company, or user activities from the game company can be brought to the forum.
-4. Such functions can be immediately applied without having to modify existing mileage, points or levels. Like the example of 'DDengle', existing points can be converted, paid and used.
+def send(to, value):
+if self.storage[msg.sender] >= value:
+self.storage[msg.sender] = self.storage[msg.sender] - value
+self.storage[to] = self.storage[to] + value
 
-Basically, if a forum wants to distribute, transfer and manage coins, it needs other coin controlling parts along with the wallet. These parts would be similar to the roles played by existing 'exchanges'. 
-
-
-### Essential factors of the forum to utilize coins
-
-1. The user can create an own wallet for deposit, and through this wallet the user can receive external coins or tokens on the blockchain network.
-2. The forum can create deposit wallets by users subordinate to the user's hot wallet, and forum coins coming in at the same time from externally can be received.
-3. The address of the coin will change if there is a behavior of the user creating a trading rule for coins and executing the rules. Although mutual deals accompanying cash are mostly used in exchanges, address of the coins will change in the forms of recommendation, donation and entries in the forum.
-4. If these occur in the forum (in this chapter 'exchange'), direct transfer to the DB will be done without using an external blockchain network.
-5. Every user can create a wallet for withdrawal which can be used for direct remittance to an external forum, personal wallet and if listed, to a local or overseas exchange.
-6. Within the forum, the administrator can provide coins according to internal rules of the forum based on activities such as login, writing comments and recommendation.
-7. Every member can donate coins to other members or give coins as a return for the comment and also receive coins from other users based on their activities.
-8. To prove the transaction, certain parts of coins of a certain user can be locked in. Such lock-in can be used not only for the ESNrow function but also for the coin to be proof of various transactions and for betting processes, and also can be led to actual approval by linking with subsequent actions.
-9. Coins can be used not only for conditional events but also for bets or betting between users, and even be applied to simple games within the forum if stronger modules are utilized.
-10. The forum has been designed to introduce its own fees. The administrator of the forum can define a certain fee rate for the transactions between users in advance, and can collect certain portion of the coin profits.
-11. Since EtherSocial and coins based on it both use blockchain, if there are deposit/withdrawal with parties outside the forum, there will be fees for blockchain miners which become profits for them.
-12. The forum can decide on its own fee rate, however a very low fee rate can be rejected by miners like other blockchain coins and the forum can experience lots of delays. This is not something an EtherSocial company should be involved in.
-13. Coins can be used instead of cash to apply for various events within and outside the forum, and a limit per person will prevent the tyranny of certain users holding large amounts of coins.
-14. Moreover, the use of EtherSocial or token as a reward for user actions such as recommendation is encouraged, as the purpose is to enable actual contents creators to make profits.
-15. As small forums can experience difficulties in developing their own coins because of the blockchain technology and difficulties in the verification process, it is recommended that those forums issue tokens on EtherSocial.
+这是在此白皮书中说明的在毫无任何加工的情况下直接使用 “银行体系”的“状态变换函数（state transition function）”。不仅为了处理货币单位的定义和分配的最初工作，而且在处理其他合约账户的余额信息有可能会添加几行代码。但这些就是制作代币系统的全部过程。从理论上来看，以以太坊为基础的下一个单位的货币体系的代币系统是拥有比特币没有的原货币（比特币区块链联动的货币）的主要特征。还可以在支付交易费用时直接使用。通过以下过程可以实现此特征。为了执行合约，应拥有分配给发送人的货币量的ESN。然后在执行合约时，以手续费收取的内部货币可立即换钱后充值为以太坊社交网余额。使用者虽然可以利用ESN“激活”他们的账户，但与其将每个合约获取的金额来换ESN，不如再次使用充一次的ESN。
 
 
-### Expansion functions to various forums such as games
+## 补偿型社交的适用过程
+### 货币事业化过程中所需部分
+以太坊社交网是为了支付型内容论坛而设计的。此外还有将博客形式的内容制作者邀请到论坛中的作用。货币是脱离服务器或DB认证均可适用于内容的点击式补偿、推荐补偿、直接购买。而且还连接在其他网站以各不相同的服务器为基础活动的内容。                                                    许多货币推出时都拥有一个以上的作用。通过利用区块链的技术与各种应用软件的白皮书，可以知道区块链贡献于多少个领域。但在许多货币中，如白皮书中所诉一样实用的货币的只是一小部分，这对货币和区块链的商业化产生了质疑。即使已通过很多安全验证和传送技术，并且可以流通许多应用软件及各种内容，但还需了解一下在现实生活中适用量少的货币的理由。
+1. 首先可以举区块链生态系统与一般内容/软件开发者间的差异。到目前为止区块链还是属于虚拟货币的领域，主要受挖矿者和投资者的关注，其他软件开发者对此关注度较低。
+2. 此外，比起将大量投资的ICO等投资金额安装在实质性的应用软件上，人们对通过有效营销来推出稳定货币更感兴趣，所以通过货币的生成和上市，一般都将焦点放在现有投资者的利益上。
+3.虽然试过几次，但区块链还是以安全为中心的所有来转移，所以添加其他功能来减速或减少网络资源有很大的反感。                                                                          不管是什么理由，货币并非单纯的持有或交易对象，应与各种应用软件及系统交易来扩大其使用范围。在此情况下，持续的ICO与新货币投资的泛滥会把加密货币的整个生态系统变成投机场所。因此需要一种软件结合与运营的实质性例子。 
 
-EtherSocial especially is designed to be firstly applied to contents reward-type forums, and modules will be continuously expanded to be applied to game forums and social network services moving forward.
-1. External advertisements can be purchased through EtherSocial or EtherSocial based tokens. 
-2. Such advertising reward can be provided to the contents producer. 
-3. By restricting recommendation or donation per person, a more democratic voting can be enabled. 
-4. The same reward is provided to blogs and forums within the forum. (Rewards can even be transferred to a blog outside the forum. In this case, the blog should have an EtherSocial wallet.)
-5. There are functions such as exposing the ranking of coins and recommendation, however it is encouraged to disable the contents producer from checking such information. (With the right of the forum administrator, owned coins can be exposed, and marketing or contents can be provided to members above a certain amount of coin). However, as long as the coin is permitted to be transferred externally, it is better not to be exposed due to security reasons.
+以太坊社交网是基于现有的加密货币论坛ddengle，提供实质性论坛运营所需要的模块，并从收集在运营论坛中所适用的例子开展的。除ICO等筹资手段外，透明公开了所有过程——挖矿和货币的生产/分配，以及在集体智慧和协商下得出的结果。
+
+### 为激活论坛的货币特征
+
+论坛运营者可在现有的积分概念上构建较广的奖励体系。在论坛内可以使用现有的积分和累计消费积分，还可用货币作为奖励分配给外部合作公司或广告营销。利用以太坊社交网所提供的代币制作出的各论坛货币可以很自由地分配/奖励/交易。此外还可基于这种流动性添加其他功能。
+
+1. 可以直接奖励其他论坛和广告主。就是说提前给广告主分配一定量的货币，那么广告主会直接将它提供给顾客。
+2. 在P2P交易或二手交易中可以提供适当的信托账户服务。就是说一起提供存款额与代币，在结束交易和确认时可直接转现金，而且还可以直接使用此代币。
+3. 尤其在游戏中添加为名次奖励。当与外部游戏公司合作时，可利用代币很容易地将使用者带入游戏公司或将游戏公司使用者的活动带到论坛中。
+4. 这些功能在不修改现有的积分或累计分数、等级前提下即可使用。就如ddengle的例子，可以将现有的积分换算后支付并利用。
+
+若论坛想分配、转移、保存钱币，需一种如钱包般可控制货币的部分。其作用和以前“交易所”的作用差不多。
+
+### 为使用货币的论坛必要条件
+
+1. 使用者可以专为自己制作存款钱包，然后可在区块链网络上通过该钱包收取外部的货币或代币。
+2. 论坛作为本人热钱包的下一单位，可制作每个使用者的存款钱包，还可以收取外部暂时进账的论坛货币。
+3. 使用者履行生成货币交易条约之后的行为。就是说主要使用于交易所中与现金的双方交易。但在论坛上货币地址会变为推荐、捐赠、应征等。
+4. 这种情况在论坛（本章是指交易所）发生时，不利用外部的区块链网可直接可以转移DB。
+5. 每个使用者可以制作支出钱包，若在外部论坛、个人钱包和上市使用的话，可在国内外交易所直接汇款。
+6. 根据在论坛内登录、留言、制作、推荐等行为，管理者可按照论坛内部规定支付。
+7. 每个会员可向其他会员捐献或回报留言来支付货币。也可以根据自己的活动来收取其他会员的货币。
+8. 为了证明交易可以冻结特定使用者的特定货币。这种锁定状态（Lock in）不仅可以在信托账户上使用，而且还可以在各种交易的保证金、攻击过程等使用。此外还可与之后的状态链接起来成为实质性的许可过程。
+9. 不仅在条件部的活动中，而且还可以用于消费者的打赌或攻击上，还可利用更强的模具使用在论坛内的简单的游戏中。
+10. 基本设计为可自主引进手续费。论坛管理者可以提前制定使用者间的交易手续费比率。通过这个可以回收特定部分的货币。
+11. 因为以太坊社交网及以它为基础的货币也可以利用区块链，所以与论坛外部进出帐时，发生为区块链挖矿者的手续费，这便成为挖矿者们的收益。
+12．虽然手续费比率可由论坛自主决定，但手续费比率过低的情况，与其他区块链货币一样可以被挖矿者拒绝或延迟。这不属于以太坊社交网公司的管辖范围。
+13. 在论坛内外的各种活动中可代替现金应征，因每个人收取都有限额，所以可以防止拥有大量货币者的横行霸道。
+14. 尤其对使用者奖励推荐使用以太坊社交网或代币，但其目的还是让实际内容生产者获得利益。
+15. 小型论坛自主开发货币不仅会遇到区块链的技术问题，还会遇到根据挖矿检验过程的问题。所以建议在以太坊社交网上发行代币。
+
+### 扩展到游戏以外各种论坛的的功能
+
+以太坊社交网的设计首先是符合内容奖励型的论坛，为了适用于今后游戏论坛和社交网络服务将继续扩大其模具。
+1. 可通过以太坊社交网或基于以太坊社交网的代币来直接购买外部广告。
+2. 可将这种广告的奖励提供给内容生产者。
+3. 提供限制人均推荐或捐赠次数的功能，实现民主的投票。
+4. 像博客和论坛内的论坛都提供相同的奖励。（甚至还可向外部论坛传送奖励。若这种情况，该博客需有以太坊社交网钱包。）
+5. 虽提供公开货币拥有量顺序、推荐等功能，但还是建议生产者不可以直接确认。（根据论坛运营者的权限，可以公开拥有货币量，并且对特定货币拥有者支援营销或提供内容。）但若允许货币本身可以向外部传送的话，应根据安全等理由最好不公开。
+
+### 为实际适用所需的API
+
+在论坛上定义核心事项的功能，并说明该模具的实现方式。为了将货币适用于实际软件上，应拥有将钱包分配给每个会员的系统。这种壁垒从安全开始与好几个现有交易所存在的问题一样。设计货币时，虽然有版权保护和流通的功能，但若其使用者将钱包编制的话就无法使用了。所以以太坊社交网为了解决这些问题，在应用软件控制钱包与货币的部分提供API来解决问题。最初的API只局限在一般的论坛上，但为了在今后的博客和游戏道具交易中使用，会持续添加API。
+
+基本需要的API目录
+
+1. 锁定
+* 定义：锁定功能是指将使用者的货币在特定期间或特定活动期间内冻结状态变化。
+* 这是为了保障交易之后的程序或提供信托账户功能。 
+* 大部分锁定是使用者自己选择而实行的，但一部分是系统自动赋予锁定功能。 
+* 使用者指定锁定的种类：是为交易的准备、拍卖、可取消的传送。
+* 系统指定的锁定：是关于账户的区块状态、交易确认的准备。
+* 解锁的方法
+2. 货币生成（在论坛上分配给使用者的行为）
+* 定义：不是生成实际的货币，而是在论坛内部拥有者分配给使用者的行为。 
+* 一般与论坛内部的累计分数系统或积分相结合后支付。 
+* 通过参与活动、留言、推荐等持续分配。 
+*分配的API里存在许多“恶意”的使用者。这除了被盗外，还会发生反复注册、推荐的帮助等。若不能生成适用于API的CAP，会引起非常致命的问题。所以需铭记拥有的货币量会一夜之间蒸发，论坛内会剧增通货膨胀。
+*支持手动分配。虽然可以自动分配，但可以通过手动分配管理总量。
+3. 单方提供
+* 定义：在论坛内使用者给其他使用者或客体（企业会员等）传送货币的行为。
+* 利用于收费推荐或应征活动、捐赠。 
+* 看似交易，但处理为单方提供是没有定期的预订（若社交发行时收取的货币等）、顾客等不能收取的处理为单方提供。 
+* 单方提供应与通过钱包流入外部的“钱包出帐”区分开来。
+4. 双方交易
+* 定义：使用者间包含货币交易的行为。 
+* 因为论坛并非交易所，但可视为不经常发生的二手交易或数字内容交易。 
+* 将提供非常有限的API。为了将这一部分更加广泛地利用，建议与高水平的程序师一同进行开发。一般提供的API不包含这些所有商业目的，这些商业性使用包含着比较广泛的安全焦点和责任素材。一般API不包含保证服务，这部分应在各个论坛的责任下添加项目。 
+5. 钱包进出帐地址的生成
+* 定义：为了收取个别使用者货币的论坛的钱包地址的生成及管理。 
+* 货币的钱包即是“代币”形式，也可生成和管理个人钱包。但论坛会员不需非得有钱包，因为这等于浪费。论坛可生成或管理每个会员进出帐的钱包地址，所以也可以便捷地收取或发送外部的货币。 
+* 均衡管理存取款与实际内部拥有货币十分重要。这不仅是其他API难以提供的项目，而且还与论坛政策有着紧密的关系。这部分基于钱包的均衡，调节论坛其他领域的均衡或生成任意调整账户来调节均衡。 
+* 为了实际性的存取款区块链异常问题（现为确认阶段、浏览区块链内部的交易消息）最好在以太坊社交网上提供或利用外部开发者的探索工具。 
 
 
-### APIs required for actual application
+## 补偿型内容论坛的开发计划
 
-The forum defines the functions of core items and explains how to realize each modules. To apply the coins to actual software, there needs to be a system in place that distributes the wallet to each member. Beginning from security, such a barrier is a similar difficulty existing exchanges had. Although coins are designed to protect copyright and to be distributed, if the user still has to program the wallet, it would remain as a concept that cannot be eventually used. To solve this fundamental issue, EtherSocial provides a solution by providing additional APIs for the parts where application software control the wallet and the coins. Initial APIs are basically limited to the forum, and APIs to utilize blogs and game item trades will be continuously added. 
+### 现论坛的一般形式
 
-List of basically required APIs
+1．ddenggle是以讨论为中心的论坛形式。所以根据该文的生成内容负担较少，还因留言或其他用户的参与能够制作更好的内容。一个内容完成之后，会根据讨论、检验以及各阵营立场出现分歧。但这些所有过程会都成为好的信息和好的内容。 
+* 因为是留言板形式，所以不属于制作者，而属于论坛，不会提供任何收益。
+* 必须通过支持、批评、验证等过程。
+* 即使是有名的笔者，但比起笔者中心的搜索更依赖于一般推荐的留言板。
+* 留言板为平准化，应持续管理。但平等的论坛并非是好的。此外管理多样新人和非法的留言板是不可缺少的。 
 
-1. Lock-in
-    * Definition: Lock-in is to fix the change of state of the users' coins for a certain period or until a certain event takes place. 
-    * This function is basically set up to guarantee behaviors after the transaction or to provide ESNrow functions. 
-    * Most of the lock-in takes place due to the action chosen by the user, but some lock-ins are automatically given by the system. 
-    * Types of lock-in defined by the user: preparation for transaction, auction, cancellable transfers
-    * Types of lock-in defined by the system: block condition of the account, preparation for transaction approval
-    * Cancelling lock-in
-2. Generating coins (an act of distributing to users from the forum)
-    * Definition: Actual coins are not created, but coins owned internally by the forum are distributed to members) 
-    * Basically, coins are paid together with the internal mileage system of the forum or points. 
-    * Coins can be continuously distributed through participation in events, writing comments and recommendations. 
-    * There is a high possibility that the distribution of APIs can be 'misused'. Other than functional hacking, issues such as repetitive membership subscription, help in recommendation can continuously occur. It should be kept in mind that if an appropriate cap is not created to the application of API, a very serious problem might occur, coins might evaporate overnight and there could be a rapid increase of inflation within the forum. 
-    * Manual distribution of coins is supported. Automatic distribution of coins is possible, but it is better to manage the overall amount of coins through manual distribution.
-3. One-sided provision
-    * Definition: The act of a user transferring coins to another user or an entity(business member etc.) within the forum
-    * One-sided provision is used as paid recommendation, applying to events and donations etc. 
-    * Promises(such as an agreement to receive money when the novel is published) that have not been further confirmed or cannot be received, are considered as one-sided provision even though they might look like transactions.
-    * One-sided provision is different from the 'withdrawal from wallet', of which coins go out through the wallet.
-4. Mutual transaction
-    * Definition: The act of trading between users that include coins
-    * As a forum is not an exchange, such trading can be acted as secondhand deals or digital contents transactions, although it does not happen that often.
-    * Very limited APIs will be provided. To use this part more extensively, it is recommended that development is done with a comparably qualified programmer. Basic APIs that are provided do not include all of these commercial purposes, and such commercial usage includes broader security issues and responsibilities. Basic APIs do not guarantee the service itself and these parts should go through additional programming under the responsibility of each forum.
-5. Creating a wallet address for deposit and withdrawal
-    * Definition: Creation and management of the forum's wallet address to receive coins of individual users
-    * Although the coin wallet is in the form of a 'token', a personal wallet can be created and managed. However, a forum member does not need a wallet as it can be almost unnecessary. The forum will create and manage the address of the wallet by members of which deposit and withdrawal is possible, so that the wallet can easily receive or send external coins.
-    * Managing the balance between coin deposit/withdrawal and internally owned coins, is very crucial. This is not only an item of which it is difficult to provide a separate API, but also very closely related to the forum policy. For this matter, balance of other parts of the forum should be well adjusted based on the balance of the wallet or adjusted by creating an arbitrary balance adjustment account. 
-    * For blockchain related issues regarding actual deposit and withdrawal, if possible, EtherSocial Explorers provided by EtherSocial or external developers should be used. 
+2. 个人博客形式的论坛。个人可以创作，还可以长期连载博客。所以有利于制作及提供较高水平的内容。但要多宣传或曝光自己，因而会加重贫富分化的现象。因属于个人服务，会出现广告费或合作费用等实质性的销售或收益。这些激励都会给予创造者很大的帮助。
+* 因为是博客形式，虽然和创作者的能力成正比，但能够展现优秀而多样的才艺和表现。
+* 因此对创作需要付出努力，这样也会出现质量的差异。 
+* 可以展现广告等多种收益模式，扩大更多的关注与邻居来确保稳定的内容供应处，最终能够增大收益。
+* 版权十分明确。
+* 整理内容及分类十分容易。
 
-
-## Development plan for reward-type contents forum
-
-### General forms of current forums 
-
-1. DDengle is a forum in which discussion takes up the main part. Because of that, there is less burden for producing contents, as comments or participation of other users complete good contents. Production of contents is followed by discussion and verification, different opinions from different positions, making this whole process into good information and contents. 
-    * DDengle is a bulletin board type forum in which contents are not subordinate to the writer but to the forum, and there are no separate profits to be provided.
-    * Support, criticism and verification are inevitable. 
-    * Although the writer might be a famous person, users generally depend on recommended articles rather than searching the writer's name.
-    * As the bulletin board is standardized, continuous management is required. Equal forums are not always the good forums. It is vital to manage various newcomers and inappropriate articles. 
-
-2. Individual blog type forums. Individuals can produce their own contents and provide high quality contents, as series can be posted on the blog for a long-term. However, difficulties in advertising and exposing oneself could aggravate the 'rich-get-richer and poor-get-poorer' phenomenon. As the forum is about personal services, actual sales or profits of advertising or partnership expenses can be generated. Such motivation can always be substantial help to the creator. 
-    * The issue with the blog format is that the blog is proportional to the creator's ability, but it is also possible to do greater and diverse directing and expressions.
-    * Therefore, lots of efforts are required for creation of contents, and there could be a huge gap in terms of quality.
-    * Various profit models such as advertisements can be deployed, and stable provision of contents to followers or neighbors that are continuously added up, will eventually increase profits. 
-    * Copyright is clear.
-    * Arrangement and classification of contents is clear and relatively easy.
-
-
-### Development direction
-
+### 开发方向
 ![](https://ethersocial.org/images/blockchain_process_eng.png)
 
-Advantages of the discussion forum composed of bulletin boards and blogs should be combined, and coins should be used as intermediaries for profit distribution and contents vitalization to make users intervene more actively. To this end, general creators should use the application software APIs of EtherSocial that are applicable. 
-1. Articles posted on the bulletin board should be able to be grouped in the form of a blog. 
-    * Basically, the format of the forum should be the bulletin board where discussions and verification are possible.
- 
-    * Articles posted by users can be grouped and made into blogs, or linked and categorized. 
-    * Information on advertisements or clicks of the article should be shared. 
+留言板形式混合了讨论型论坛和博客的优点，将货币作为收益分配和激活内容的媒介更加积极地参与进来。为此一般的创作者也可以利用使用以太坊社交网的应用软件API。
+1.在留言板上可将本人留言以博客形式分组。 
+* 一般维持为可以讨论和验证的留言板和论坛形式。 
+* 将本人的帖子分组成为博客化或链接形式。 
+* 分享该文的广告或点击的信息。 
 
-2. 'Paid recommendation' and democratic recommendation using coins should all be permitted and direct profits should be generated. 
-    * By applying EtherSocial to advertising expenses or recommendations, rewards should be directly paid to the creator. 
-    * By purchasing coins, advertisers should be charged using more improved filters.
-    * By utilizing 'paid recommendation' for both article and comments, readers can reward the creator. 
-    * By setting limits per person for the number of recommendations, democratic decision-making on ranking can be enabled if necessary. 
+2. 允许利用货币的“费用支付型推荐”和民主推荐，使其发生直接性的收入。 
+* 在广告费或推荐等利用以太坊社交网，向创造者直接支付补偿。 
+* 广告主购买货币后，利用更好的过滤器来充值。 
+* 在该文和留言上都利用“费用支付型推荐”，读者可以向创作者支付补偿。 
+* 在推荐上等设置每人的限额，必要时可进行民主顺序来决定。 
 
+### 积极的收益分配
 
-### Active profit sharing
-
-When using EtherSocial, we can receive advertising expenses or donations through our wallets not only from our own forums, but also from external partner websites or individual homepages. There could be benefits such as additional profits being generated utilizing existing contents and importing one's blog into a new forum. 
-
-Our goal is the update of a new reward type contents forum in the fourth quarter of 2018. 
- 
-
-## Reward program for EtherSocial developers
-
-### Scope of reward program
-
-From its beginning, EtherSocial was created based on the collective intelligence of the forum and contributions made by an extensive range of participants even not only developers. Therefore EtherSocial includes a reward program for developers who participated in the development starting from coin distribution, marketing and for all other participants who have contributed to the improvement and development of blockchain and cryptocurrency. This does not necessarily have to be improvement of EtherSocial coin but includes active participation for the Crypto-Community Forum DDengle or our own development other than GitHub. These would include hardware or management software for mining, suggestions for actual use of existing coins, but are not related to profits. However, such reward programs exclude the development of new coins for the purpose of ICO. ICO itself is still closer to a profit-making model but has the possibility to be changed in the future. Detailed standards regarding the scope of the reward program are dESNribed as the following.
-
-1. Contributors for the development of EtherSocial
-    * Contributions to the development, modification and stabilization of sources for GitHub of EtherSocial
-    * Contributions to the addition, modification and supplementation of contents of Wiki excluding the program itself
-    * Contributions to the improvement of languages and policy directions of each countries
-    * Contributions to local and foreign partnerships for the actual use of EtherSocial
-    * Contributions to the development of individual contributions evaluating algorithm
-2. Improvers of the mining system
-    * Contributions to the development and maintenance of local and foreign EtherSocial mining pool
-3. Application Software Developers
-    * Contributions to the development of EtherSocial based DApp related to the forum, social network service, game and media
-    * Contributions  to the development of APIs for the development and improvement of application software
-4. Individual who strived for the development of cryptocurrency and improvement of its image using marketing and social network services 
-    * Contributions to EtherSocial marketing and its vitalization providing qualitative and quantitative contents
-5. Individual who contributed to considering the drawing up of policy or its direction
-6. Individual who contributed to the new concept and its possibility
-    * Contributions to the technological and applicable expansion of EtherSocial
+利用以太坊社交网时，不仅在我们制作的论坛上，还可以在外部合作公司或个人网站中也可以通过我们的钱包来收取广告费或获得捐赠。利用已有的内容创造更多的收入，还可享受将自己的博客进军新博客的待遇。
+宗旨是在2018年第4季度更新新补偿内容论坛。
 
 
-### Reward program
+## 为以太坊社交网开发者的补偿项目
 
-The challenges of EtherSocial are to assess the level of contribution on a fair basis and provide rewards thereof. EtherSocial's development forum will continuously discuss about additional contributions and rewards, and the discussion outcomes will be applied henceforth. The details of the support plan are as the following.
-1. Plan to vitalize individual donation
-    * Contents creators or programmers and marketing people can register on the EtherSocial creators' forum and create anonymous accounts for donation. 
-    * This account does not expose personal information and includes the address of EtherSocial internally. 
-    * If anyone from the registered account makes a donation, EtherSocial managers will make an additional donation equivalent to the donated amount. 
-    * Of course, there is a donation ceiling per person to prevent the operational funds from being depleted due to excessive donation of a single person. Also, adjustments will be made for fairer execution. 
-    * The modules provided by EtherSocial are designed to enhance stability of donation and meet the interest of contents providers by additionally providing an amount almost equivalent to the donated amount. 
-    * Individual donation will be vitalized by providing benefits worth the donated amount to the donator.
-2. Reward plan according to contribution rankings based on voting
-    * As it is almost impossible to objectify rewards for individual contribution, periodical or non-periodical voting is done to release the ranking reflecting collective intelligence and to provide the corresponding reward.
-    * A list of candidates is drawn up every month or occasionally by getting recommendations through EtherSocial’s website. 
-    * Details of actual activities and support provided by the candidates are released and online voting is carried out.
+### 补偿项目的范畴
 
+以太坊社交网从问世开始都是以论坛的集体智慧而生成的。除开发者外，还由广泛的参与其中。因此在分配货币的过程给予很多人补偿项目。他们是参与开发的开发者以及帮助营销的、贡献于区块链及加密货币的改善与发展的各种从事者。以太坊社交网不是非要改善的，但还包括ddengle或为我们开发的Git hub以外的活动。此外还包含为挖矿的硬件和管理软件以及现有货币的实质性利用的建议，这与有无收入无关。但这些补偿项目排除了为ICO的新货币开发。到目前为止ICO本身更接近于收入模式，因此今后有可能会改变。有关补偿项目范围的详细标准如下。
 
-## Roadmap
-    * The first ESN was mined on December 26, 2017.
-    * A beta test carried out by selecting members of the forum 'DDengle' on January 15, 2018.
-    * 4 million coins allocated to the forum 'DDengle' in the fourth week of January 2018 
-(to be used for the next ten years).
-    * The first ESN coin mining pool opened in the fourth week of January 2018.
-    * Direction of batch coin distribution announced to the members of 'DDengle' in the 
-fourth week of January 2018.
-(Existing member ratings and activity index reflected) 
-    * Formal launch of the EtherSocial coin in the fourth week of January 2018 (official launch).
-    * Additional coin distribution to members of 'DDengle' in February 2018.
-    * Release of official ESN White Paper in February 2018.
-    * Announcement for joint development with external forum based on ESN in March 2018 (technological support for token development of external forum).
-* Official announcement of APIs for the use of external forums in April 2018 
-(application cases of DDengle etc.).
-    * Meetup to be held through the mining conference in April 2018.
-    * Launch of coins for the use in overseas forums in the third quarter of 2018.
-    * Listing of ESN on foreign exchanges in the third quarter of 2018.
-    * Launch of coins for two to three local and overseas external forums in the fourth quarter of 2018.
-    * Launch of integrated operational tool that combines forum and coins in the fourth quarter of 2018.
-    * Overseas launch of 'contents reward type forum' in the fourth quarter of 2018.
+1. 贡献于以太坊社交网的开发者 
+* 贡献于以太坊社交网Git hub中直接参与开发、修改、稳定性
+* 贡献于对非项目的维基内容的添加、修改、完善
+* 贡献于各个国家语言及政策改善
+* 贡献于有关以太坊社交网的实质性利用的国内外业务合作
+* 贡献于个人评价演算法开发
+2. 挖矿体系的改善者
+* 贡献于以太坊社交网挖矿池的开发及维持管理
+3. 货币的应用软件开发者
+* 贡献于论坛、社交网站服务、游戏及有关媒体且基于以太坊社交网的分布式应用程序
+* 贡献于开发及改善应用软件的API开发
+4. 利用营销及社交网站服务致力于开发加密货币以及改善形象的人
+* 提供质与量的内容来贡献于以太坊社交网的营销及激活
+5. 对政策的立案或方向性考察给予贡献的人
+6. 对新的概念和可行性贡献的人
+* 贡献于以太坊社交网的技术性、活用性、拓展性
 
+### 补偿项目运营
 
-## Other issues
-
-### Introduction of uncle blocks
-
-EtherSocial introduced uncle blocks for the following reasons.
-
-EtherSocial has a very short block generation cycle compared to the ten minutes of Bitcoin. This causes weakened security due to the following reasons. Let us assume that miner A generated a block. A generates the block and transfers the block to the network. In the meantime when A's block has not yet arrived to miner B, B might have generated a block too. Since EtherSocial provides numbers to blocks, the block of miner A and miner B will have the same block numbers. In Bitcoin, only the block of miner A would be recognized and the block of miner B would be discarded, which means that the resources of miner B is wasted and did not contribute to the network security.
-
-Also, there is the issue of centralization. If miner A has a hash power of 30% and B of 10%, the risk of A producing a stale block will always be 70% (as for the other 30%, since A created the last block, A would immediately get mining data), and B will always have 90% risk of producing a stale block. Therefore, if the block cycle is short enough necessary for the high stale rate, A would have much higher efficiency just by the fact that its size is large. As these two effects are combined, there is a high possibility that in a blockchain of which the block cycle is short, a single pool with a high hash power share will have actual control over the mining process.
-
-This is why we do not only provide rewards to the blocks of longest chains but also to blocks that are almost generated at the same time but have slightly less hash power. Those subordinate blocks are called as uncle blocks derived from the word 'uncle'. These uncle blocks also get 87.5% of the original rewards and ‘cousin’ blocks that include the uncle blocks receive the remaining 12.5%. However, transfer fees are not given to uncle blocks.
-
-EtherSocial provides rewards up to the seventh generation of uncle blocks. This is because if rewards are given without any limits, uncle blocks can increase tremendously and calculation will become much complicated. Secondly, if uncle blocks are given limitless rewards, instead of mining the main, miners will intentionally mine from the uncle blocks.
+以太坊社交网的课题是公平评价贡献度来支付补偿。对于新的贡献与补偿，以太坊社交网计划持续讨论，并持续反映其结果。详细支援计划如下。
+1. 个人捐赠激活方案
+* 在以太坊社交网制作者论坛上登记内容制作者或程序员以及营销负责人，还可生成为捐赠的匿名账户。
+* 此账户不泄漏个人消息，并将以太坊社交网地址包含其中。 
+* 若此帐户中的任何一个会员捐赠的话，以太坊社交网运营者会捐赠与将该捐赠额相同的金额。 
+* 当然有每人捐赠额度，这可以防止因一个人过度捐赠使运营资金枯竭的现象，还可以调整公正的执行。
+* 以太坊社交网提供的模具可提高捐赠的安全性，并且将该捐赠的追加金额设计为符合内容提供者的利益的模式。 
+* 向捐赠者支付捐赠金额的优惠来激活个人捐赠。
+2. 有关投票贡献顺序的补偿计划
+* 对于个人给予的补偿，因为不具有客观性，因此进行定期或非定期的投票来反应集体智慧顺序并进行公开及补偿。
+* 通过每月或非定期的以太坊社交网站的推荐选定大奖名单。
+* 对于选定人员的实质性活动及帮助内容进行公开和在线投票。
 
 
-### Fees
-As all transactions included in the blockchain require computing resources to download and verify the transactions, a cost for using the resources, the so-called transaction fees need to be paid. Transaction fees are definitely required, because if not, excessive amount of transactions would consume computing resources and transaction issues could arise. Likewise, transaction fees need to be paid for the transaction of ERC-20 tokens to prevent the abuse of transferring tokens. In Bitcoin mining, as the sender voluntarily sets the fees and higher fees are prioritized in mining according to the principle of market competition, transaction fees and generation of blocks are determined based on the principle of supply and demand.
-
-However, one issue is that there are always miners who want to maximize profits when generating blocks through transactions. This is why the following problems can occur.
-
-First, to generate a block, numerous transactions need to be verified and a hash that generates the blocks need to be made. However, as it takes time to verify the transactions and there is higher possibility that block generation is delayed, miners might not be able to make profits. Also, as much as the time is delayed, there will be less time for preparation to generate the next block, which eventually lowers the possibility of generating a block. 
-Second, miners only want to include transactions that require less time for verification and that can maximize fee returns.
-
-Because of these reasons, if a rational fee structure is not in place, transactions of EtherSocial and ERC-20 tokens might experience difficulties.
-
-
-### Currency and Issuance
-
-The EtherSocial network has its own currency called 'ESN' which is used internally. ESN is an intermediary that enables efficient exchanges between various digital assets, and also provides ways to pay transaction fees. For the convenience of users and to prevent any possible disputes, the names for each unit of ESN are already defined as the following. (Refer to arguments about the naming of Bitcoin)
-
-* 1: wei
-* 10^18: ESN
-
-It will be easier to understand, if the above names are thought as extended concepts like 'dollars' and 'cents' of the American currency, or 'BTC' and 'Satoshi' of Bitcoin. Other names are not included in the client as of now.
-
-Currency issuance model:
-
-* ESN is used to financially support the EtherSocial organization, to collect funds necessary for development, to give salaries and rewards to developers and as an investment fund for various profit-making and non-profit projects related to EtherSocial.
-* In the beginning, 4,000,000 ESN are issued to be accumulated as a reserve for EtherSocial (DDengle) and are constantly distributed every year. Then, twice as much will be additionally issued to be reserved in the EtherSocial forum (DDengle) for collaboration and marketing of the forum. Again, twice as much as the issued EtherSocial will be additionally issued to be reserved for initial prior-to-launch donators and for development expenses of EtherSocial, and to be distributed to EtherSocial's development organization (Genercrypto).
-* 0.5 times of the coins distributed to EtherSocial's development organization will be issued additionally as a long-term reserve of EtherSocial's development organization and not to be used for one year.
-* After the time of mining, 18,709,078 ESN are newly issued for the first one year and after that every year a total of 15,626,576 ESN are newly issued to miners.
-* After that, depending on the level of block and mining difficulty, mining amount can gradually decrease.
-* Mining algorithm can be changed by developers depending on the level of mining difficulty and the use of a mining equipment.
-
-The following explanation is about the legitimacy of the 'EtherSocial forum's reserve'. For example, EtherSocial can be constantly distributed every year for ten years and contribute to increasing the user base. A certain portion will be distributed according to the contributions of the forum's members and another portion can be distributed through specific events. Also, EtherSocial can be distributed if necessary, as a basic asset for using EtherSocial tokens in other forums or websites. If there is no such reserve, EtherSocial cannot be easily acquired and the user base will inevitably become smaller. 
-
-Legitimacy of the 'distribution to EtherSocial's development organization (Genercrypto)' can be explained as the following. Many development human resources, planning and marketing manpower are required to develop blockchain and various APIs as well as for repair and maintenance. As expenses are accompanied in running an organization, to cover such expenses, EtherSocial has to be distributed to the EtherSocial development organization. For legitimacy of the 'long-term reserve', the following explanation can be applied. This long-term reserve is not to be distributed to the market for at least one year (or more than a year). For the first one year, mining reward is 18,709,078 ESN, meaning that the proportion of the mined amount to the initially issued amount is much higher than other cryptocurrencies. However, if initial issuance is increased too much, then ESN may not become a widely used cryptocurrency. Therefore, initial issuance should be kept at a level lower than the half of Ethereum but not too low, and distribution for the first one year should be prohibited. 
-
-** For comparison **
-** Initial issuance of Ethereum is 60,102,216 ETH and mining reward for the first one year is 15,626,576 ETH**
-** Initial issuance of EtherSocial is 36,000,000 ESN and mining reward for the first one year is 18,709,078 ESN + 12,000,000 ESN of which distribution is prohibited **
+## 路线
+* 2017年12月26日 挖出第一个ESN
+* 2018年01月15日 在论坛“ddengle”中选出的会员中进行了ß实验ß
+* 2018月01月第四周 将货币400万个分配给论坛“ddengle”（今后将进行10年） 
+* 2018年01月第四周 开启ESN货币挖矿池
+* 2018年01月第四周 公布向所有论坛“ddengle”会员分配货币
+（反应了之前会员的等级与活动指数)
+* 2018年01月第四周 以太坊社交网正式上市（正式推出）
+* 2018年02月 为“ddengle”会员分配了追加货币
+* 2018年02月 ESN正式白皮书版本
+* 2018年03月 发布共同开发基于ESN的其他论坛（支援其他论坛代币开发技术）
+* 2018年04月 正式公布外部论坛专用API（采用了ddengle的例子）
+* 2018年04月 举办通过挖矿会议的Meet Up
+* 2018年第三季度 国外论坛专用货币上市
+* 2018年第三季度 国外交易所ESN上市
+* 2018年第四季度 推出国内外少于2～3个的外部论坛货币
+* 2018年第四季度 推出利用论坛+货币的整合运营工具
+* 2018年第四季度 在国外推出“内容补偿型论坛”
 
 
-Permanently issuing new coins from a set amount of ESN could relieve the 'concentration of wealth phenomenon' currently Bitcoin is experiencing. Also, it provides opportunities for current or future participants to acquire EtherSocial through mining and not through the market. By increasing initial mining more than Ethereum, 9 ESN shall be set as the mining reward until 300,000 blocks and 5 ESN for the blocks afterwards. 
+## 其他焦点
+
+### 引入叔叔区块
+
+以太坊社交网因下述理由引入了叔叔区块。
+
+以太网社交网生成区块的周期比起比特币的10分钟尤为短暂。因此会出现低安全性等问题，其理由如下。假设挖矿者A生成区块，A将生成的区块上传到了网络上。但此时A的区块未到达B挖矿者处时，B也可以生成区块。因为以太坊社交网的区块里包含着区块的编码，因此挖矿者A和挖矿者B的区块编号会相同，在这种情况下，只会认证A挖矿者的区块，B挖矿者的则会淘汰。这会导致挖矿者B资源的浪费现象，还不能贡献于网络安全的后果。
+
+此外还有中央集中化的焦点。若挖矿者A拥有30%的哈希计算力、挖矿者B拥有10%的哈希计算力，那么每次A生成旧区块的危险性达70%（因为剩余的30%A会制作最后一个区块。因此会及时拥有挖矿数据。）。这样一来B每次生产旧区块的危险性就会达90%。因此万一区块周期随着旧区块比率高所需的时间充分短暂的话，A就会以体积大来拥有更高的效率。将这两个效果结合起来，在周期短的区块链上，拥有较高哈希计算力占有率的单一池子在挖矿过程中，会拥有较高的控制权。
+所以补偿不都是给予最长区块链的。若几乎同一时间生成，但第二个生成的哈希较低的的话，会补偿给第二个区块。此外下一级区块有着与叔叔辈份差不多的意思，所以称它为叔叔区块。此区块也会得到之前补偿的87.5%，还有包括此区块在内的叔叔区块将得到剩下的12.5%。但叔叔区块不需支付传送手续费。
+
+以太坊社交网的叔叔区块最多补偿到第7代。其理由如次。第一，要是无限支付的话会出现许多“叔叔”区块，那样计算起来会非常复杂。第二，无限补偿叔叔区块的话，挖矿者不会去挖主要区块，而是会特意去挖叔叔区块。
+
+### 手续费
+区块链中包含的所有交易是因为要下载并验证此交易，其中需要计算机资源，所以应支付费用和传送手续费。若无传送手续费的话，则会泛滥无数个交易，况且消耗计算机资源不说，一定会出现无法传送有用交易等问题。所以必须得有传送手续费。与此相同，为了传送ERC-20代币，防止滥用也应支付手续费。在挖掘比特币时，传送者会自己制定手续费，根据市场竞争原理可以先挖较高的手续费，所以根据需求与供给原理决定手续费与挖矿而生成的区块。
+
+但这里存在在几个问题。在处理交易后生成区块时，有将利益最大化的挖矿者。所以存在以下几个问题。
+
+第一，若想生成区块，需验证交易后制作生成区块的哈希，但时间也会随着验证的交易量而消耗，所以区块生成时期也会变慢的可能性很大，挖矿者有可能得不到收益。而且因耽误的时间准备下一个区块的时间也会减少，这会使区块的生成几率更加降低。第二，挖矿者想包含验证时间短且收益极大化的交易。
+由于这些原因，若没有合理的手续费体系，以太坊社交网及ERC-20的代币交易的传送会无法正常进行，也会出现很多问题。
 
 
-### Mining Centralization
+### 通货及发行(Currency and Issuance)
 
-Bitcoin mining is done by repeatedly hashing the sha256 block header until a value lower than the target value is acquired. However, there are two weaknesses in this method.
+以太坊社交网拥有自己可以通用的“ESN”货币。ESN作为媒介可有效交换虚拟资产，还会提供支付交易手续费（transaction fee）的方法。为了向使用者提供便利，以及防止今后的纷争，ESN每个单位的名称如下。（参考与比特币名称有关的纷争）
 
-First, the barrier to participate in mining has become much higher. Currently mining has been completely encroached by ASIC. As the mining ASIC can have thousand times more efficiency compared to the general GPU mining equipment, mining through GPU has become less effective in terms of competitiveness. If mining activities were decentralized in the past, now centralization due to ASIC is intensifying.
+1: wei
+10^18: ESN
 
-Second is the method of mining. It is not that participants from various regions take part in the generation of blocks like the past. Nowadays they participate in mining depending on block headers provided by the mining pool. There are significant side-effects arising from this situation. As of now, three mining pools have been transferred with the computing power of individuals and are indirectly controlling almost 50% of the hashes. Of course, as individuals can move to smaller pools before the share of those pools exceed 50%, those pools cannot arbitrarily abuse resources,. However, this still remains a major issue.
+如果将上述名称理解为美元的“美金”与“美分”或者比特币的“BTC”和“聪”的扩展概念会更容易。但其他的名称客户端中还未包含。
 
-EtherSocial mining works slightly different. Each miner brings random information from the state, hashes details of randomly selected recent blocks and comes up with the result value. There are two advantages in this method.
+货币发行模式
 
-First is that Ethereum contracts can include calculation methods of all types of computers. Naturally, ASIC would have to be designed to fit for all calculation methods, but then it would become a high performance CPU rather than an ASIC. In reality, ASIC (Application Specific Integrated Circuit) itself will become useless.
+* 用金钱来支援以太坊社交网组织。并筹集开发所需的资金后，将它用于开发者的月薪和补偿以及有关以太坊社交网的各种利益与非营利的项目。
+* 最初发行的4,000,000ESN是为了用于以太坊社交网论坛（ddengle）而凑集，之后每年按照一定的数量分配。然后再追加发行2倍用于以太坊上市前的贡献者与为了开发以太坊社交网的开发费用，并分配给以太坊社交网的开发组（Genercrypto）。
+* 追加发行分配给以太坊社交网开发组的货币量的0.5倍，作为以太坊社交网开发组的长期储备金新发行而累积后一年不得使用。
+* 挖矿时期到最初的一年间为18,709,078ESN，之后是每年给挖矿者新发行15,626,576ESN。
+* 之后会根据区块与挖矿的难度来渐渐减少挖矿量。
+* 根据挖矿难度与是否使用专用挖矿机，开发者任意改变挖矿演算法。
 
-Second, miners would have to verify all transfer details by downloading the whole blockchain. In this case, there would be no need for a large and centralized pool. Of course large pools have the effect of equally distributing rewards to participants for generating new blocks, but that effect can also be sufficiently realized through the P2P type pool. There is no need to use a centralized pool.
+有关“以太坊社交网论坛（ddengle）积分”的正当性解释如下。例如，在10年的时间里，每年可以以一样的数量分配以太坊社交网来增加使用群。一定的比率根据论坛会员的贡献度而分配，一定的比率是通过特定活动来分配的。或者是为了在其他论坛或网站里使用代币而可分配的一般资产。若无这些储蓄量，很难得到以太坊社交网，其使用群也会随之减少。
 
-However, at some point, ASICs designed for Ethereum mining can be released. Therefore at this time, decentralized mining should be enabled by applying a new hash algorithm difficult for the ASIC to use.
+有关以太坊社交网开发组（Genercrypto）的正当性解释如下。区块链的开发及各种API的开发和维持管理需要大量的开发人力、企划、营销人力。为了运营此组织需要费用，而且为了充当这一费用，要给开发组织分配以太坊社交网。有关最少“长期储备金”的正当性可以如下解释。这长期储备金不是1年间（或1年以上）在市场中流通的量。最初一年的挖矿补偿量为18,709,078ESN，比起其他加密货币，最初发行量高于挖矿量比率。但只调高最初的发行量，就不能成为广泛使用的加密货币，所以最初发行量要降低到以太坊的一半以下，并且不允许将其比率过低的方法就是禁止流通最少一年。
+
+** 比较   ** 
+** 以太坊最初发行量为60,102,216 ETH，最初一年的挖矿补偿量为15,626,576 ETH   **      
+** 以太坊社交网最初发行量为36,000,000 ESN，最初一年的挖矿补偿量为18,709,078 ESN + 禁止流通的12,000,000 ESN   **
+
+永久性新发行定量ESN的方法可缓解比特币所遇到的“富的集中现象”。此外，为现在或今后的参与者提供挖矿机会，而不是拥有以太坊社交网的机会。而且增加以太坊的初期挖矿量300,000区块为9 ESN，之后将挖矿补偿量定为5ESN。
 
 
-## Conclusion
+### 挖矿中央集中化（Mining Centralization）
 
-EtherSocial provides token management tools that comply with the general-purpose ERC 20 rules based on smart contract, as well as APIs that can easily be combined with various services. EtherSocial also provides administrator management tools that enable applications with 'ESNrow, setup of withdrawal limit, financial contracts and other advanced functions' to be used in various services through a very general programming language. EtherSocial also provides support to theoretically create all types of transfer methods or applications through the turing-complete language. Through these features, forum hosts or administrators of all services that have accounts can use these services more easily and universally.
+比特币的挖矿方式是得出比目标值低的数值，对区块头反复进行sha256散列法。但该方法有两种缺点。
+
+第一，目前参与挖矿的壁垒很高。并且根据现有的挖矿ASIC所吞噬。这种ASIC挖矿机比起一般GPU等挖矿机拥有数千倍以上的效率，所以通过CPU的挖矿失去了竞争力而渐渐消失其效能。如果说过去的挖矿行为是分权化，那么现在的ASIC是深化了集中度。
+
+第二，挖矿方式。过去是几名参与者在几个地方生成区块，但现在是根据中央集中化的挖矿池（ Mining pool）提供的区块头（block header）来参与挖矿。所以出现了很多副作用。以现在为基准，三个挖矿池交接个人计算能力控制着约达50%的哈希。当然他们会在该挖矿池的占有率低于50%以前，个人移动到其他小规模的挖矿池。这样虽然不能随便滥用资源，但这仍然是个大问题。
+
+以太坊社交网的挖矿方式有点不同。每个挖矿者会随机获取状态信息（the state），将获取的最新区块内容进行散列法得出结果。这样的话会有两种优点。
+
+第一，以太坊合约包含着计算机所有种类的计算方法。因此设计ASIC时，当然也符合了所有的计算方式，这样一来成了一种高性能的CPU。就是说现实的ASIC（订购式专用半导体）已是无用之物。
+
+第二，挖矿者在工作时，下载所有的区块并验证所有的转账明细。这样的话，中央集中化的大型挖矿池就没有必要了。虽然大型挖矿池有着给参与者均匀分配新区块补偿的效果，但这一效果可以通过P2P形式的池（pool）来实现。所以没有必要使用中央集中型池子（centralized pool）。
+
+但到了一定时期，也会推出以太坊挖矿专用ASIC。在这个时期应适用难以使用的ASIC新的新哈希算法来实现挖矿。
+
+
+## 结论
+
+以太坊社交网基于智能合约提供了可以简单使用的API，它包括遵守广泛的ERC-20条约的代币管理工具和各种服务。以太坊社交网通过广范围的计算机语言将提供实用的管理者经营工具，它是“在区块链上设置信托账户或提款额度、金钱合约等高级功能”的应用程序中服务。通过图灵完全语言支持理论上所有形式的转账方式或制作应用程序。通过它一线论坛运营者或拥有账户的所有服务的管理者可以普遍使用这些服务。
