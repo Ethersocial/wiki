@@ -13,43 +13,43 @@
 
 ## 目录
 
-- [历史（History）](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E5%8E%86%E5%8F%B2history)
-   * [比特币简介](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E6%AF%94%E7%89%B9%E5%B8%81%E7%AE%80%E4%BB%8B)
-   * [比特币的极限](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E6%AF%94%E7%89%B9%E5%B8%81%E7%9A%84%E6%9E%81%E9%99%90)
-   * [以太坊简介](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E4%BB%A5%E5%A4%AA%E5%9D%8A%E7%AE%80%E4%BB%8B)
-   * [以太坊的极限](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E4%BB%A5%E5%A4%AA%E5%9D%8A%E7%9A%84%E6%9E%81%E9%99%90)
-   * [虚拟货币简介](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E8%99%9A%E6%8B%9F%E8%B4%A7%E5%B8%81%E7%AE%80%E4%BB%8B)
-   * [Steemit的极限](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#steemit%E7%9A%84%E6%9E%81%E9%99%90)
-- [比特币与基本概念](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E6%AF%94%E7%89%B9%E5%B8%81%E4%B8%8E%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5)
-   * [基本概念整理](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E7%9A%84%E6%95%B4%E7%90%86)
-   * [挖矿](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E6%8C%96%E7%9F%BF)
-- [以太坊社交网](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E4%BB%A5%E5%A4%AA%E5%9D%8A%E7%A4%BE%E4%BA%A4%E7%BD%91)
-   * [以太坊社交网的账户](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E4%BB%A5%E5%A4%AA%E5%9D%8A%E7%A4%BE%E4%BA%A4%E7%BD%91%E7%9A%84%E8%B4%A6%E6%88%B7)
-   * [消息与交易](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E6%B6%88%E6%81%AF%E4%B8%8E%E4%BA%A4%E6%98%93)
-   * [消息（Messages）](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E6%B6%88%E6%81%AFmessages)
-   * [区块链与挖矿（Blockchain and Mining）](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E5%8C%BA%E5%9D%97%E9%93%BE%E4%B8%8E%E6%8C%96%E7%9F%BFblockchain-and-mining)
-- [应用程序（Applications）](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8Fapplications)
-   * [代币系统（Token Systems）](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E4%BB%A3%E5%B8%81%E7%B3%BB%E7%BB%9Ftoken-systems)
-- [补偿型社交的适用过程](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E8%A1%A5%E5%81%BF%E5%9E%8B%E7%A4%BE%E4%BA%A4%E7%9A%84%E9%80%82%E7%94%A8%E8%BF%87%E7%A8%8B)
-   * [货币事业化过程中所需部分](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E8%B4%A7%E5%B8%81%E4%BA%8B%E4%B8%9A%E5%8C%96%E8%BF%87%E7%A8%8B%E4%B8%AD%E6%89%80%E9%9C%80%E9%83%A8%E5%88%86)
-   * [为激活论坛的货币特征](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E4%B8%BA%E6%BF%80%E6%B4%BB%E8%AE%BA%E5%9D%9B%E7%9A%84%E8%B4%A7%E5%B8%81%E7%89%B9%E5%BE%81)
-   * [为使用货币的论坛必要条件](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E4%B8%BA%E4%BD%BF%E7%94%A8%E8%B4%A7%E5%B8%81%E7%9A%84%E8%AE%BA%E5%9D%9B%E5%BF%85%E8%A6%81%E6%9D%A1%E4%BB%B6)
-   * [拓展到游戏以外各种论坛的功能](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E6%89%A9%E5%B1%95%E5%88%B0%E6%B8%B8%E6%88%8F%E4%BB%A5%E5%A4%96%E5%90%84%E7%A7%8D%E8%AE%BA%E5%9D%9B%E7%9A%84%E7%9A%84%E5%8A%9F%E8%83%BD)
-   * [为实际适用所需的API](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E4%B8%BA%E5%AE%9E%E9%99%85%E9%80%82%E7%94%A8%E6%89%80%E9%9C%80%E7%9A%84api)
-- [补偿型内容论坛的开发计划](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E8%A1%A5%E5%81%BF%E5%9E%8B%E5%86%85%E5%AE%B9%E8%AE%BA%E5%9D%9B%E7%9A%84%E5%BC%80%E5%8F%91%E8%AE%A1%E5%88%92)
-   * [现论坛的一般形式](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E7%8E%B0%E8%AE%BA%E5%9D%9B%E7%9A%84%E4%B8%80%E8%88%AC%E5%BD%A2%E5%BC%8F)
-   * [开发方向](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E5%BC%80%E5%8F%91%E6%96%B9%E5%90%91)
-   * [积极的收益分配](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E7%A7%AF%E6%9E%81%E7%9A%84%E6%94%B6%E7%9B%8A%E5%88%86%E9%85%8D)
-- [为以太坊社交网开发者的补偿项目](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E4%B8%BA%E4%BB%A5%E5%A4%AA%E5%9D%8A%E7%A4%BE%E4%BA%A4%E7%BD%91%E5%BC%80%E5%8F%91%E8%80%85%E7%9A%84%E8%A1%A5%E5%81%BF%E9%A1%B9%E7%9B%AE)
-   * [补偿项目的范畴](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E8%A1%A5%E5%81%BF%E9%A1%B9%E7%9B%AE%E7%9A%84%E8%8C%83%E7%95%B4)
-   * [补偿项目运营](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E8%A1%A5%E5%81%BF%E9%A1%B9%E7%9B%AE%E8%BF%90%E8%90%A5)
-- [路线](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E8%B7%AF%E7%BA%BF)
-- [其他焦点](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E5%85%B6%E4%BB%96%E7%84%A6%E7%82%B9)
-   * [引入叔叔区块](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E5%BC%95%E5%85%A5%E5%8F%94%E5%8F%94%E5%8C%BA%E5%9D%97)
-   * [手续费](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E6%89%8B%E7%BB%AD%E8%B4%B9)
-   * [通货与发行（Currency and Issuance）](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E9%80%9A%E8%B4%A7%E5%8F%8A%E5%8F%91%E8%A1%8Ccurrency-and-issuance)
-   * [挖矿中心集中化（Mining Centralization）](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E6%8C%96%E7%9F%BF%E4%B8%AD%E5%A4%AE%E9%9B%86%E4%B8%AD%E5%8C%96mining-centralization)
-- [结论](https://github.com/ethersocial/wiki/wiki/White-Paper-%5BChana%5D#%E7%BB%93%E8%AE%BA)
+- [历史（History）](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Bchinese%5D-white-paper.md#历史history)
+* [比特币简介](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Bchinese%5D-white-paper.md#比特币简介)
+   * [比特币的极限](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Bchinese%5D-white-paper.md#比特币的极限)
+   * [以太坊简介](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Bchinese%5D-white-paper.md#以太坊简介)
+   * [以太坊的极限](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Bchinese%5D-white-paper.md#以太坊的极限)
+   * [虚拟货币简介](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Bchinese%5D-white-paper.md#虚拟货币简介)
+   * [Steemit的极限](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Bchinese%5D-white-paper.md#steemit的极限)
+- [比特币与基本概念](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Bchinese%5D-white-paper.md#比特币与基本概念)
+   * [基本概念整理](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Bchinese%5D-white-paper.md#基本概念的整理)
+   * [挖矿](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Bchinese%5D-white-paper.md#挖矿)
+- [以太坊社交网](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Bchinese%5D-white-paper.md#以太坊社交网)
+   * [以太坊社交网的账户](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Bchinese%5D-white-paper.md#以太坊社交网的账户)
+   * [消息与交易](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Bchinese%5D-white-paper.md#消息与交易)
+   * [消息（Messages）](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Bchinese%5D-white-paper.md#消息messages)
+   * [区块链与挖矿（Blockchain and Mining）](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Bchinese%5D-white-paper.md#区块链与挖矿blockchain-and-mining)
+- [应用程序（Applications）](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Bchinese%5D-white-paper.md#应用程序applications)
+   * [代币系统（Token Systems）](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Bchinese%5D-white-paper.md#代币系统token-systems)
+- [补偿型社交的适用过程](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Bchinese%5D-white-paper.md#补偿型社交的适用过程)
+   * [货币事业化过程中所需部分](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Bchinese%5D-white-paper.md#货币事业化过程中所需部分)
+   * [为激活论坛的货币特征](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Bchinese%5D-white-paper.md#为激活论坛的货币特征)
+   * [为使用货币的论坛必要条件](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Bchinese%5D-white-paper.md#为使用货币的论坛必要条件)
+   * [拓展到游戏以外各种论坛的功能](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Bchinese%5D-white-paper.md#扩展到游戏以外各种论坛的的功能)
+   * [为实际适用所需的API](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Bchinese%5D-white-paper.md#为实际适用所需的api)
+- [补偿型内容论坛的开发计划](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Bchinese%5D-white-paper.md#补偿型内容论坛的开发计划)
+   * [现论坛的一般形式](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Bchinese%5D-white-paper.md#现论坛的一般形式)
+   * [开发方向](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Bchinese%5D-white-paper.md#开发方向)
+   * [积极的收益分配](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Bchinese%5D-white-paper.md#积极的收益分配)
+- [为以太坊社交网开发者的补偿项目](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Bchinese%5D-white-paper.md#为以太坊社交网开发者的补偿项目)
+   * [补偿项目的范畴](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Bchinese%5D-white-paper.md#补偿项目的范畴)
+   * [补偿项目运营](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Bchinese%5D-white-paper.md#补偿项目运营)
+- [路线](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Bchinese%5D-white-paper.md#路线)
+- [其他焦点](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Bchinese%5D-white-paper.md#其他焦点)
+   * [引入叔叔区块](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Bchinese%5D-white-paper.md#引入叔叔区块)
+   * [手续费](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Bchinese%5D-white-paper.md#手续费)
+   * [通货与发行（Currency and Issuance）](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Bchinese%5D-white-paper.md#通货及发行currency-and-issuance)
+   * [挖矿中心集中化（Mining Centralization）](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Bchinese%5D-white-paper.md#挖矿中央集中化mining-centralization)
+- [结论](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Bchinese%5D-white-paper.md#结论)
 
 
 
@@ -349,7 +349,7 @@ self.storage[to] = self.storage[to] + value
 ## 路线
 * 2017年12月26日 挖出第一个ESN
 * 2018年01月15日 在论坛“ddengle”中选出的会员中进行了ß实验ß
-* 2018月01月第四周 将货币400万个分配给论坛“ddengle”（今后将进行10年） 
+* 2018月01月第四周 将货币500万个分配给论坛“ddengle”（今后将进行10年） 
 * 2018年01月第四周 开启ESN货币挖矿池
 * 2018年01月第四周 公布向所有论坛“ddengle”会员分配货币
 （反应了之前会员的等级与活动指数)
@@ -402,7 +402,7 @@ self.storage[to] = self.storage[to] + value
 货币发行模式
 
 * 用金钱来支援以太坊社交网组织。并筹集开发所需的资金后，将它用于开发者的月薪和补偿以及有关以太坊社交网的各种利益与非营利的项目。
-* 最初发行的4,000,000ESN是为了用于以太坊社交网论坛（ddengle）而凑集，之后每年按照一定的数量分配。然后再追加发行2倍用于以太坊上市前的贡献者与为了开发以太坊社交网的开发费用，并分配给以太坊社交网的开发组（Genercrypto）。
+* 最初发行的 5,000,000ESN是为了用于以太坊社交网论坛（ddengle）而凑集，之后每年按照一定的数量分配。然后再追加发行2倍用于以太坊上市前的贡献者与为了开发以太坊社交网的开发费用，并分配给以太坊社交网的开发组（Genercrypto）。
 * 追加发行分配给以太坊社交网开发组的货币量的0.5倍，作为以太坊社交网开发组的长期储备金新发行而累积后一年不得使用。
 * 挖矿时期到最初的一年间为18,709,078ESN，之后是每年给挖矿者新发行15,626,576ESN。
 * 之后会根据区块与挖矿的难度来渐渐减少挖矿量。
@@ -414,7 +414,7 @@ self.storage[to] = self.storage[to] + value
 
 ** 比较   ** 
 * 以太坊最初发行量为 72,002,436 ETH，最初一年的挖矿补偿量为 15,626,576 ETH
-** 以太坊社交网最初发行量为 49,922,490 ESN，最初一年的挖矿补偿量为18,709,078 ESN
+** 以太坊社交网最初发行量为 49,922,490 ESN，最初一年的挖矿补偿量为18,709,078 ESN. 次年，一年的挖矿补偿量为15,626,576 ESN
 
 永久性新发行定量ESN的方法可缓解比特币所遇到的“富的集中现象”。此外，为现在或今后的参与者提供挖矿机会，而不是拥有以太坊社交网的机会。而且增加以太坊的初期挖矿量300,000区块为9 ESN，之后将挖矿补偿量定为5ESN。
 
@@ -442,6 +442,6 @@ self.storage[to] = self.storage[to] + value
 
 
  ## Reference
- 1. Bitcoin Whitepaper https://bitcoin.org/bitcoin.pdf
- 1. Ethereum Whitepaper https://github.com/ethereum/wiki/wiki/White-Paper
- 1. Steem Whitepaper https://steem.io/SteemWhitePaper.pdf
+ 1. Bitcoin Whitepaperhttps://bitcoin.org/bitcoin.pdf
+ 2. Ethereum Whitepaperhttps://github.com/ethereum/wiki/wiki/White-Paper
+ 3. Steem Whitepaperhttps://steem.io/SteemWhitePaper.pdf

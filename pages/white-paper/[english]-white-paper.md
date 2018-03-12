@@ -1,4 +1,6 @@
-## Decentralized forum application platform using smart contract
+## Abstract
+
+### Decentralized forum application platform using smart contract
 
 Bitcoin, of which the blocks were first generated in January 2009, brought up global currency innovation. This was the first case to actually utilize blockchain and to move away from the traditionally non-reliable network to trust-based innovation using blockchain as the Bitcoin ledger, and eventually to bring about currency innovation. Since then, the use of Bitcoin has been steadily growing along with its technology development.
 
@@ -10,62 +12,59 @@ Ethereum is a continuously developing blockchain that demonstrates tremendous ad
 
 EtherSocial provides management tools that can generate tokens complying with the ERC-20 smart contract rules with a couple of clicks as well as API functions that are applied to various services. Through EtherSocial, website administrators can plan, make, create, transfer, manage and burn their own tokens.
  
+## Table of Contents
 
-### Table of Contents
-
-### Table of Contents
-
-- [History](https://github.com/ethersocial/wiki/wiki/White-Paper#history)
-  * [Introduction of Bitcoin](https://github.com/ethersocial/wiki/wiki/White-Paper#introduction-of-bitcoin)
-  * [Limitations of Bitcoin](https://github.com/ethersocial/wiki/wiki/White-Paper#limitations-of-bitcoin)
-  * [Introduction of Ethereum](https://github.com/ethersocial/wiki/wiki/White-Paper#introduction-of-ethereum)
-  * [Limitations of Ethereum](https://github.com/ethersocial/wiki/wiki/White-Paper#limitations-of-ethereum)
-  * [Introduction of Steem coin](https://github.com/ethersocial/wiki/wiki/White-Paper#introduction-of-steem-coin)
-  * [Limitations of Steemit](https://github.com/ethersocial/wiki/wiki/White-Paper#limitations-of-steemit)
-- [Bitcoin and its basic concept](https://github.com/ethersocial/wiki/wiki/White-Paper#bitcoin-and-its-basic-concept)
-  * [Basic concept of reserves](https://github.com/ethersocial/wiki/wiki/White-Paper#basic-concept-of-reserves)
-  * [Mining](https://github.com/ethersocial/wiki/wiki/White-Paper#mining)
-- [EtherSocial](https://github.com/ethersocial/wiki/wiki/White-Paper#ethersocial)
-  * [EtherSocial account](https://github.com/ethersocial/wiki/wiki/White-Paper#ethersocial-account)
-  * [Message and Transaction](https://github.com/ethersocial/wiki/wiki/White-Paper#message-and-transaction)
-  * [Messages(Messages)]( https://github.com/ethersocial/wiki/wiki/White-Paper#messages)
-  * [Blockchain and Mining](https://github.com/ethersocial/wiki/wiki/White-Paper#blockchain-and-mining)
-- [Applications](https://github.com/ethersocial/wiki/wiki/White-Paper#applications)
-  * [Token Systems](https://github.com/ethersocial/wiki/wiki/White-Paper#token-systems)
-- [Application process of incentivized communities](https://github.com/ethersocial/wiki/wiki/White-Paper#application-process-of-incentivized-communities)
-  * [Requirements for commercialization of coins](https://github.com/ethersocial/wiki/wiki/White-Paper#requirements-for-commercialization-of-coins)
-  * [Coin features to vitalize forum](https://github.com/ethersocial/wiki/wiki/White-Paper#coin-features-to-vitalize-forum)
-  * [Essential factors of the forum to utilize coins](https://github.com/ethersocial/wiki/wiki/White-Paper#essential-factors-of-the-forum-to-utilize-coins)
-  * [Expansion functions to various forums such as games](https://github.com/ethersocial/wiki/wiki/White-Paper#expansion-functions-to-various-forums-such-as-games)
-  * [APIs required for actual application](https://github.com/ethersocial/wiki/wiki/White-Paper#apis-required-for-actual-application)
-- [Development plan for reward-type contents forum]( https://github.com/ethersocial/wiki/wiki/White-Paper#development-plan-for-reward-type-contents-forum)
-  * [General forms of current forums](https://github.com/ethersocial/wiki/wiki/White-Paper#general-forms-of-current-forums)
-  * [Development direction](https://github.com/ethersocial/wiki/wiki/White-Paper#development-direction)
-  * [Active profit sharing](https://github.com/ethersocial/wiki/wiki/White-Paper#active-profit-sharing)
-- [Reward program for EtherSocial developers](https://github.com/ethersocial/wiki/wiki/White-Paper#reward-program-for-ethersocial-developers)
-  * [Scope of reward program](https://github.com/ethersocial/wiki/wiki/White-Paper#scope-of-reward-program)
-  * [Operation of reward program](https://github.com/ethersocial/wiki/wiki/White-Paper#reward-program)
-- [Roadmap](https://github.com/ethersocial/wiki/wiki/White-Paper#roadmap)
-- [Other issues](https://github.com/ethersocial/wiki/wiki/White-Paper#other-issues)
-  * [Introduction of uncle blocks](https://github.com/ethersocial/wiki/wiki/White-Paper#introduction-of-uncle-blocks)
-  * [Fees](https://github.com/ethersocial/wiki/wiki/White-Paper#fees)
-  * [Currency and Issuance](https://github.com/ethersocial/wiki/wiki/White-Paper#currency-and-issuance)
-  * [Mining Centralization](https://github.com/ethersocial/wiki/wiki/White-Paper#mining-centralization)
-- [Conclusion](https://github.com/ethersocial/wiki/wiki/White-Paper#conclusion)
+- [History](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Benglish%5D-white-paper.md#history)
+* [Introduction of Bitcoin](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Benglish%5D-white-paper.md#introduction-of-bitcoin)
+* [Limitations of Bitcoin](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Benglish%5D-white-paper.md#limitations-of-bitcoin)
+  * [Introduction of Ethereum](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Benglish%5D-white-paper.md#introduction-of-ethereum)
+  * [Limitations of Ethereum](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Benglish%5D-white-paper.md#limitations-of-ethereum)
+  * [Introduction of Steem coin](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Benglish%5D-white-paper.md#introduction-of-steem-coin)
+  * [Limitations of Steemit](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Benglish%5D-white-paper.md#limitations-of-steemit)
+- [Bitcoin and its basic concept](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Benglish%5D-white-paper.md#bitcoin-and-its-basic-concept)
+  * [Basic concept of reserves](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Benglish%5D-white-paper.md#basic-concept-of-reserves)
+  * [Mining](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Benglish%5D-white-paper.md#mining)
+- [EtherSocial](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Benglish%5D-white-paper.md#ethersocial)
+  * [EtherSocial account](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Benglish%5D-white-paper.md#ethersocial-account)
+  * [Message and Transaction](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Benglish%5D-white-paper.md#message-and-transaction)
+  * [Messages(Messages)]( https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Benglish%5D-white-paper.md#messages)
+  * [Blockchain and Mining](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Benglish%5D-white-paper.md#blockchain-and-mining)
+- [Applications](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Benglish%5D-white-paper.md#applications)
+  * [Token Systems](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Benglish%5D-white-paper.md#token-systems)
+- [Application process of incentivized communities](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Benglish%5D-white-paper.md#application-process-of-incentivized-communities)
+  * [Requirements for commercialization of coins](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Benglish%5D-white-paper.md#requirements-for-commercialization-of-coins)
+  * [Coin features to vitalize forum](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Benglish%5D-white-paper.md#coin-features-to-vitalize-forum)
+  * [Essential factors of the forum to utilize coins](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Benglish%5D-white-paper.md#essential-factors-of-the-forum-to-utilize-coins)
+  * [Expansion functions to various forums such as games](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Benglish%5D-white-paper.md#expansion-functions-to-various-forums-such-as-games)
+  * [APIs required for actual application](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Benglish%5D-white-paper.md#apis-required-for-actual-application)
+- [Development plan for reward-type contents forum]( https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Benglish%5D-white-paper.md#development-plan-for-reward-type-contents-forum)
+  * [General forms of current forums](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Benglish%5D-white-paper.md#general-forms-of-current-forums)
+  * [Development direction](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Benglish%5D-white-paper.md#development-direction)
+  * [Active profit sharing](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Benglish%5D-white-paper.md#active-profit-sharing)
+- [Reward program for EtherSocial developers](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Benglish%5D-white-paper.md#reward-program-for-ethersocial-developers)
+  * [Scope of reward program](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Benglish%5D-white-paper.md#scope-of-reward-program)
+  * [Operation of reward program](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Benglish%5D-white-paper.md#reward-program)
+- [Roadmap](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Benglish%5D-white-paper.md#roadmap)
+- [Other issues](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Benglish%5D-white-paper.md#other-issues)
+  * [Introduction of uncle blocks](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Benglish%5D-white-paper.md#introduction-of-uncle-blocks)
+  * [Fees](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Benglish%5D-white-paper.md#fees)
+  * [Currency and Issuance](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Benglish%5D-white-paper.md#currency-and-issuance)
+  * [Mining Centralization](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Benglish%5D-white-paper.md#mining-centralization)
+- [Conclusion](https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Benglish%5D-white-paper.md#conclusion)
 
 
 ## History 
 
 ### Introduction of Bitcoin
 
-The first digital currency, Bitcoin, was first suggested in the thesis of Satoshi Nakamoto in 2008 under the title 'Bitcoin: A Peer-to-Peer Electronic Cash System'. Nakamoto realized the transfer and storage of coins adopting the blockchain technology. Blockchain was suitable to be used as a financial transaction ledger, as previous data could not be modified and the issue of double spending could be prevented. It is difficult to forge or falsify blocks as hash information that requires lots of computing power for calculation is recorded in each block. Time is also recorded in each block and as blocks refer to the immediate previous block, all blocks would have to be forged, making it realistically impossible. There are opinions that implementation of a quantum computing could pose a serious level of threat to Bitcoin, however this would only be possible after more than a decade, meaning that this is a fully safe system at least for the foreseeable future. 
+The first digital currency, Bitcoin, was first suggested in the thesis of Satoshi Nakamoto in 2008 under the title 'Bitcoin: A Peer-to-Peer Electronic Cash System'. <sup><1></sup>Nakamoto realized the transfer and storage of coins adopting the blockchain technology. Blockchain was suitable to be used as a financial transaction ledger, as previous data could not be modified and the issue of double spending could be prevented. It is difficult to forge or falsify blocks as hash information that requires lots of computing power for calculation is recorded in each block. Time is also recorded in each block and as blocks refer to the immediate previous block, all blocks would have to be forged, making it realistically impossible. There are opinions that implementation of a quantum computing could pose a serious level of threat to Bitcoin, however this would only be possible after more than a decade, meaning that this is a fully safe system at least for the foreseeable future. 
 Despite the absence of a central administrator for Bitcoin, about 500,000 blocks have been generated since the creation of the genesis block on January 9, 2009 without any hacking on the Bitcoin itself, boasting a sound level of security. A daily average of 230,000 transactions take place through Bitcoin and a market capitalization of more than 200 trillion Korean Won was recorded.
 As for Bitcoins, new blocks are generated through Proof of Work (PoW). The first cryptocurrency was made through the collaboration of voluntary miners even without the existence of central control or intermediary. To use the credit card, the most popular payment method in the modern society or for overseas remittance, a central server was required. A reliable institution such as a 'bank' or 'credit card company' that can prove that I have sent the money, was essential. Bitcoin enabled the transfer and storage of coins without a third party, making it truly a breakthrough innovation never imagined before.
 
 
 ### Limitations of Bitcoin
 
-There have been upgrades of the Bitcoin through continuous modification of codes. However, as it has been quite a while since the first development of the Bitcoin and because it is the first cryptocurrency, Bitcoin has some obvious limitations. 
+There have been upgrades of the Bitcoin through continuous modification of codes. However, as it has been quite a while since the development of the Bitcoin and because it is the first cryptocurrency, Bitcoin has some obvious limitations. 
 It takes more than ten minutes for the transfer of Bitcoin, as a block is generated once every ten minutes. Also, because the value of 1BTC is excessively high, it is not easy to use it as a means for payment in actual life. 
 Bitcoin is a public blockchain and its transaction list is open to the public. As it is open to the public, Bitcoin is transparent and cannot be manipulated, but its weakness is that it cannot hide secrets. Many users who own large amount of BTCs may not want to expose their BTCs. Also, there are people who want to hide their transaction details. To overcome such limitations, coins with anonymity functions such as the Zcash or Monero have emerged. 
 Another important limitation would be that it is difficult to use the Bitcoin in areas other than the transaction of coins. The language called 'Script' used in Bitcoin only allows limited functions as there are no repetitive statements. Against this background emerged Ethereum, to go beyond its limits and to be expanded to other domains, not confined to the transaction of cryptocurrency.
@@ -73,7 +72,7 @@ Another important limitation would be that it is difficult to use the Bitcoin in
 
 ### Introduction of Ethereum
 
-ICO (Initial Coin Offering) of Ethereum took place in 2014 and the first version was released in 2015. Ethereum was a platform that actually realized the concept of 'smart contract' using blockchain. The concept of smart contract is that when a contract is created with digital commands, the terms of the contract are automatically executed according to the conditions.  DApps or decentralized applications that extend blockchain to various domains can be made easily than before using Ethereum. 
+ICO (Initial Coin Offering) of Ethereum took place in 2014 and the first version was released in 2015. Ethereum was a platform that actually realized the concept of 'smart contract' using blockchain. The concept of smart contract is that when a contract is created with digital commands, the terms of the contract are automatically executed according to the conditions.  DApps or decentralized applications that extend blockchain to various domains can be made easily than before using Ethereum. <sup><2></sup>
 Ethereum users can generate a 'token' and use it for whatever purpose of the user. Once a new token is generated, the blockchain will be easily generated as well and transaction, wallet and explorer is given to the user who generated the token. The major difference between a token and a coin is that a coin has its own network whereas a token is made and run on top of a network of another coin. The common thing is that both have the transaction function and are recorded in the blockchain. 
 Currently 443 tokens are made based on the Ethereum platform and those account for 81% of the token market based on the types of coins. Tokens utilizing Ethereum enabled crowdfunding with multiple investors without an intermediary, and for the first time in June 2017, the amount invested through ICO into blockchain surpassed the amount invested through venture capitals, demonstrating the energy of ICO. Through ICO, small investors who were not able to participate with small amount of investment could invest in high-tech IT venture companies and projects and realize profits. Also, individuals and groups that already had ideas and technological know-how but insufficient capital found a new way of financing.
 The most substantial risk to Ethereum was the DAO hack. Although smart contract was a double-edged sword that gave versatility, the rapid speed of development lowered the level of overall security. This resulted in the DAO hack and eventually led to the Hard Fork of Ethereum. Many of such security weaknesses are now substantially improved. Since the DAO hack in 2016, numerous ICOs took place on the Ethereum platform but no crucial security issues have ever occurred since then. Therefore, it is safe to say that the current Ethereum code has gone through years of stabilization and testing, and is now reliable.
@@ -86,6 +85,7 @@ The most important issue of Ethereum is that it is difficult to directly introdu
 ### Introduction of Steem coin
 
 Steem coin is a forum-specific coin of 'Steemit', of which sales began in 2016. The purpose of Steem coin is to generate coins that can be used across the forum. Steemit is composed of personal blogs and comments, and users who give good comments to postings obtain rewards. Individual users who frequently use Steemit can be rewarded through Steem coins. If the value of the user's Steem coin increases in the exchange, the user is bound to acquire additional profits as much as the amount of Steem coin the user owns. 
+<sup><3></sup>
 The Steem coin forum service itself was successful enough to have acquired more than 600,000 users. The value of Steem, the digital currency used in the Steemit forum, increased by more than six times for a year and eight months, since its launch in April 2016.
 
 
@@ -147,7 +147,7 @@ ESN is used to pay the transaction fee as a fee to run the smart contract of Eth
 ### Message and Transaction
 
 Transaction refers to the transferring details of EtherSocial and includes information of who sent what to whom. 
-Transactions include the following information.
+Transactions include the following information. <sup><2></sup>
 
 * Recipient
 * Signature of the sender
@@ -163,7 +163,7 @@ To prevent repetitive execution of transactions caused by mistake or limitless a
 ### Messages
 
 Transfer contract can call out other contracts using messages and then deliver information. In other words, smart contracts can be delivered using messages. 
-Messages include the following information.
+Messages include the following information. <sup><2></sup>
 
 * Sender
 * Recipient
@@ -177,7 +177,7 @@ Messages are similar to transactions except that messages are not from external 
 ### Blockchain and Mining
 EtherSocial blockchain is similar to the previously explained Bitcoin blockchain, but is also different in many ways. The major difference is that unlike Bitcoin, EtherSocial blocks include the most recent state of the account, block number and difficulty. Since Bitcoin blocks do not have block numbers, one needs to start counting from the very first block to know the block number.
 
-The following explains the basic methods of verifying EtherSocial blocks.
+The following explains the basic methods of verifying EtherSocial blocks. <sup><2></sup>
 
 1. Check the existence and validity of the current block. 
 2. Check whether the timestamp of the current block is greater than the previous block and does not exceed 15 minutes as of the current time.
@@ -195,7 +195,7 @@ A smart contract is created when contract code of each transaction is executed a
 
 ### Token Systems
 
-The blockchain token system has applications that realize many types of transaction systems on the network, from the sub-currency linked with US dollars or gold, smart property (assets of which the ownership is controlled/managed on the Bitcoin blockchain), secure and unforgeable coupons to other token systems (for example, point system to provide incentives) not linked with conventional value. The token system on EtherSocial can be realized in a surprisingly easy way. The following are the core parts in understanding the token system.
+The blockchain token system has applications that realize many types of transaction systems on the network, from the sub-currency linked with US dollars or gold, smart property (assets of which the ownership is controlled/managed on the Bitcoin blockchain), secure and unforgeable coupons to other token systems (for example, point system to provide incentives) not linked with conventional value. The token system on EtherSocial can be realized in a surprisingly easy way. The following are the core parts in understanding the token system. <sup><2></sup>
 
 * Currency and token systems execute only one function.
 * Currency/token of unit X is deducted from A, and the deducted currency/token of unit X is paid to B.  However, A should have held a minimum unit of X before the transaction.
@@ -385,18 +385,19 @@ The challenges of EtherSocial are to assess the level of contribution on a fair 
 ## Roadmap
     * The first ESN was mined on December 26, 2017.
     * A beta test carried out by selecting members of the forum 'DDengle' on January 15, 2018.
-    * 4 million coins allocated to the forum 'DDengle' in the fourth week of January 2018 
-(to be used for the next ten years).
+    * 5million coins allocated to the forum 'DDengle' in the fourth week of January 2018 
+      (to be used for the next ten years).
     * The first ESN coin mining pool opened in the fourth week of January 2018.
     * Direction of batch coin distribution announced to the members of 'DDengle' in the 
-fourth week of January 2018.
-(Existing member ratings and activity index reflected) 
+      fourth week of January 2018.
+      (Existing member ratings and activity index reflected) 
     * Formal launch of the EtherSocial coin in the fourth week of January 2018 (official launch).
     * Additional coin distribution to members of 'DDengle' in February 2018.
     * Release of official ESN White Paper in February 2018.
-    * Announcement for joint development with external forum based on ESN in March 2018 (technological support for token development of external forum).
-* Official announcement of APIs for the use of external forums in April 2018 
-(application cases of DDengle etc.).
+    * Announcement for joint development with external forum based on ESN in March 2018 
+      (technological support for token development of external forum).
+    * Official announcement of APIs for the use of external forums in April 2018 
+      (application cases of DDengle etc.).
     * Meetup to be held through the mining conference in April 2018.
     * Launch of coins for the use in overseas forums in the third quarter of 2018.
     * Listing of ESN on foreign exchanges in the third quarter of 2018.
@@ -409,7 +410,7 @@ fourth week of January 2018.
 
 ### Introduction of uncle blocks
 
-EtherSocial introduced uncle blocks for the following reasons.
+EtherSocial introduced uncle blocks for the following reasons. <sup><2></sup>
 
 EtherSocial has a very short block generation cycle compared to the ten minutes of Bitcoin. This causes weakened security due to the following reasons. Let us assume that miner A generated a block. A generates the block and transfers the block to the network. In the meantime when A's block has not yet arrived to miner B, B might have generated a block too. Since EtherSocial provides numbers to blocks, the block of miner A and miner B will have the same block numbers. In Bitcoin, only the block of miner A would be recognized and the block of miner B would be discarded, which means that the resources of miner B is wasted and did not contribute to the network security.
 
@@ -436,14 +437,16 @@ Because of these reasons, if a rational fee structure is not in place, transacti
 The EtherSocial network has its own currency called 'ESN' which is used internally. ESN is an intermediary that enables efficient exchanges between various digital assets, and also provides ways to pay transaction fees. For the convenience of users and to prevent any possible disputes, the names for each unit of ESN are already defined as the following. (Refer to arguments about the naming of Bitcoin)
 
 * 1: wei
-* 10^18: ESN
+* 10<sup>12</sup>: szabo
+* 10<sup>15</sup>: finney
+* 10<sup>18</sup>: ESN
 
 It will be easier to understand, if the above names are thought as extended concepts like 'dollars' and 'cents' of the American currency, or 'BTC' and 'Satoshi' of Bitcoin. Other names are not included in the client as of now.
 
 Currency issuance model:
 
 * ESN is used to financially support the EtherSocial organization, to collect funds necessary for development, to give salaries and rewards to developers and as an investment fund for various profit-making and non-profit projects related to EtherSocial.
-* In the beginning, 4,000,000 ESN are issued to be accumulated as a reserve for EtherSocial (DDengle) and are constantly distributed every year. Then, twice as much will be additionally issued to be reserved in the EtherSocial forum (DDengle) for collaboration and marketing of the forum. Again, twice as much as the issued EtherSocial will be additionally issued to be reserved for initial prior-to-launch donators and for development expenses of EtherSocial, and to be distributed to EtherSocial's development organization (Genercrypto).
+* In the beginning, 5,000,000 ESN are issued to be accumulated as a reserve for EtherSocial (DDengle) and are constantly distributed every year. Then, 8,000,000 ESN will be additionally issued to be reserved in the EtherSocial forum (DDengle) for collaboration and marketing of the forum. Again 36,922,490 EtherSocial will be additionally issued to be reserved for initial prior-to-launch donators and for development expenses of EtherSocial, and to be distributed to EtherSocial's development organization (Genercrypto).
 * 0.5 times of the coins distributed to EtherSocial's development organization will be issued additionally as a long-term reserve of EtherSocial's development organization and not to be used for one year.
 * After the time of mining, 18,709,078 ESN are newly issued for the first one year and after that every year a total of 15,626,576 ESN are newly issued to miners.
 * After that, depending on the level of block and mining difficulty, mining amount can gradually decrease.
@@ -453,9 +456,16 @@ The following explanation is about the legitimacy of the 'EtherSocial forum's re
 
 Legitimacy of the 'distribution to EtherSocial's development organization (Genercrypto)' can be explained as the following. Many development human resources, planning and marketing manpower are required to develop blockchain and various APIs as well as for repair and maintenance. As expenses are accompanied in running an organization, to cover such expenses, EtherSocial has to be distributed to the EtherSocial development organization. For legitimacy of the 'long-term reserve', the following explanation can be applied. This long-term reserve is not to be distributed to the market for at least one year (or more than a year). For the first one year, mining reward is 18,709,078 ESN, meaning that the proportion of the mined amount to the initially issued amount is much higher than other cryptocurrencies. However, if initial issuance is increased too much, then ESN may not become a widely used cryptocurrency. Therefore, initial issuance should be kept at a level lower than the half of Ethereum but not too low, and distribution for the first one year should be prohibited. 
 
-** For comparison **
-** Initial issuance of Ethereum is 60,102,216 ETH and mining reward for the first one year is 15,626,576 ETH**
-** Initial issuance of EtherSocial is 36,000,000 ESN and mining reward for the first one year is 18,709,078 ESN + 12,000,000 ESN of which distribution is prohibited **
+** Summary
+* Forum Distribution : Ddengle 5,000,000 ESN, external relations 8,000,00 ESN
+* Developer’s reward : 36,000,000 ESN
+* Early development and mining contributors : 922,490 ESN
+* Total : 49,922,490 ESN
+
+
+** For comparison
+* Initial issuance of Ethereum is 70,002,436 ETH and mining reward for the first one year is 15,626,576 ETH**
+* Initial issuance of EtherSocial is 49,922,490 ESN and mining reward for the first one year is 18,709,078 ESN. Afterwards, mining reward per year would be 15,626,576 ESN. 
 
 
 Permanently issuing new coins from a set amount of ESN could relieve the 'concentration of wealth phenomenon' currently Bitcoin is experiencing. Also, it provides opportunities for current or future participants to acquire EtherSocial through mining and not through the market. By increasing initial mining more than Ethereum, 9 ESN shall be set as the mining reward until 300,000 blocks and 5 ESN for the blocks afterwards. 
@@ -481,3 +491,10 @@ However, at some point, ASICs designed for Ethereum mining can be released. Ther
 ## Conclusion
 
 EtherSocial provides token management tools that comply with the general-purpose ERC 20 rules based on smart contract, as well as APIs that can easily be combined with various services. EtherSocial also provides administrator management tools that enable applications with 'ESNrow, setup of withdrawal limit, financial contracts and other advanced functions' to be used in various services through a very general programming language. EtherSocial also provides support to theoretically create all types of transfer methods or applications through the turing-complete language. Through these features, forum hosts or administrators of all services that have accounts can use these services more easily and universally.
+
+
+## Reference
+1. Bitcoin Whitepaper https://bitcoin.org/bitcoin.pdf
+2. Ethereum Whitepaper https://github.com/ethereum/wiki/wiki/White-Paper
+3. Steem Whitepaper https://steem.io/SteemWhitePaper.pdf
+
