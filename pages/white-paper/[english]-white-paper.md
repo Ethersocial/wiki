@@ -385,18 +385,19 @@ The challenges of EtherSocial are to assess the level of contribution on a fair 
 ## Roadmap
     * The first ESN was mined on December 26, 2017.
     * A beta test carried out by selecting members of the forum 'DDengle' on January 15, 2018.
-    * 4 million coins allocated to the forum 'DDengle' in the fourth week of January 2018 
-(to be used for the next ten years).
+    * 5million coins allocated to the forum 'DDengle' in the fourth week of January 2018 
+      (to be used for the next ten years).
     * The first ESN coin mining pool opened in the fourth week of January 2018.
     * Direction of batch coin distribution announced to the members of 'DDengle' in the 
-fourth week of January 2018.
-(Existing member ratings and activity index reflected) 
+      fourth week of January 2018.
+      (Existing member ratings and activity index reflected) 
     * Formal launch of the EtherSocial coin in the fourth week of January 2018 (official launch).
     * Additional coin distribution to members of 'DDengle' in February 2018.
     * Release of official ESN White Paper in February 2018.
-    * Announcement for joint development with external forum based on ESN in March 2018 (technological support for token development of external forum).
-* Official announcement of APIs for the use of external forums in April 2018 
-(application cases of DDengle etc.).
+    * Announcement for joint development with external forum based on ESN in March 2018 
+      (technological support for token development of external forum).
+    * Official announcement of APIs for the use of external forums in April 2018 
+      (application cases of DDengle etc.).
     * Meetup to be held through the mining conference in April 2018.
     * Launch of coins for the use in overseas forums in the third quarter of 2018.
     * Listing of ESN on foreign exchanges in the third quarter of 2018.
