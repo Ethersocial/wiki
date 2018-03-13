@@ -8,5 +8,5 @@ https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Benglish%5D-
 # White Paper [Korean]
 https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Bkorean%5D-white-paper.md
 
-# White Paper [Chana]
+# White Paper [China]
 https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Bchinese%5D-white-paper.md
