@@ -1,4 +1,4 @@
-# wiki page
+# Official wiki page
 https://github.com/ethersocial/wiki/wiki
 
 # White Paper 
