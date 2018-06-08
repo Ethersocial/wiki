@@ -1,6 +1,5 @@
-# wiki page
+# Official wiki page
 https://github.com/ethersocial/wiki/wiki
-
 
 # White Paper 
 https://github.com/ethersocial/wiki/blob/master/pages/white-paper/%5Benglish%5D-white-paper.md
