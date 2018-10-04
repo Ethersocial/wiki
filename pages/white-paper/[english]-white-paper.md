@@ -203,10 +203,12 @@ The blockchain token system has applications that realize many types of transact
 
 In EtherSocial, the user just has to reflect the above logic to the contract. The basic codes that execute the token system in the Serpent are as the following.
 
+~~~python
     def send(to, value):
         if self.storage[msg.sender] >= value:
             self.storage[msg.sender] = self.storage[msg.sender] - value
             self.storage[to] = self.storage[to] + value
+~~~
 
 In this case, the 'state transition function' of the banking system explained in this white paper is applied per se. To define the unit of the currency and do the initial work for distribution, or to enable other contracts to process information requests on the balance of accounts, additional lines of codes could be written. But that is all we need to make a token system. Theoretically, the token system as a sub-currency system based on EtherSocial may have an important feature the MetaCurrency (currency linked to the Bitcoin blockchain) based on Bitcoin does not have. It is that payment can be directly made with the currency used when trading the transaction costs. Such feature can be realized through the following process. To execute a contract, the ESN balance should be as much as the costs to be paid to the sender. And the internal currency that is received as a fee when executing the contract, can be immediately exchanged and charged as an EtherSocial balance. Although users have to 'activate' their accounts through the ESN, the amount obtained through each contract can be exchanged to ESN every occasion. This implies that a once-charged ESN can be re-used.
 
@@ -228,7 +230,7 @@ Based on the existing cryptocurrency forum 'DDengle', EtherSocial begins its ser
 Forum administrators can set up a more extended reward system from the existing concept of mileage. Coins can be used as existing points or mileage within the forum and as rewards for external partner companies or advertising and marketing. Each forum coin that is made as a token provided by EtherSocial can be freely distributed, listed and traded. Further expansion is possible based on such liquidity.
 
 1. Rewards can be provided directly to other forums and advertisers. In other words, a certain amount of coins will be distributed to the advertisers in advance, and the advertiser can provide the rewards directly to the customers.
-2. ESNrow services appropriate for P2P or secondhand trades can be provided. In other words, the deposit amount can be provided with the tokens, and as soon as the deal is approved, the tokens can be liquidated or the tokens can be traded again.
+2. Escrow services appropriate for P2P or secondhand trades can be provided. In other words, the deposit amount can be provided with the tokens, and as soon as the deal is approved, the tokens can be liquidated or the tokens can be traded again.
 3. In particular, providing additional rewards for game ranking is also possible. By using tokens when partnering with external game companies, forum users can be easily brought to the game company, or user activities from the game company can be brought to the forum.
 4. Such functions can be immediately applied without having to modify existing mileage, points or levels. Like the example of 'DDengle', existing points can be converted, paid and used.
 
@@ -244,7 +246,7 @@ Basically, if a forum wants to distribute, transfer and manage coins, it needs o
 5. Every user can create a wallet for withdrawal which can be used for direct remittance to an external forum, personal wallet and if listed, to a local or overseas exchange.
 6. Within the forum, the administrator can provide coins according to internal rules of the forum based on activities such as login, writing comments and recommendation.
 7. Every member can donate coins to other members or give coins as a return for the comment and also receive coins from other users based on their activities.
-8. To prove the transaction, certain parts of coins of a certain user can be locked in. Such lock-in can be used not only for the ESNrow function but also for the coin to be proof of various transactions and for betting processes, and also can be led to actual approval by linking with subsequent actions.
+8. To prove the transaction, certain parts of coins of a certain user can be locked in. Such lock-in can be used not only for the escrow function but also for the coin to be proof of various transactions and for betting processes, and also can be led to actual approval by linking with subsequent actions.
 9. Coins can be used not only for conditional events but also for bets or betting between users, and even be applied to simple games within the forum if stronger modules are utilized.
 10. The forum has been designed to introduce its own fees. The administrator of the forum can define a certain fee rate for the transactions between users in advance, and can collect certain portion of the coin profits.
 11. Since EtherSocial and coins based on it both use blockchain, if there are deposit/withdrawal with parties outside the forum, there will be fees for blockchain miners which become profits for them.
@@ -272,7 +274,7 @@ List of basically required APIs
 
 1. Lock-in
     * Definition: Lock-in is to fix the change of state of the users' coins for a certain period or until a certain event takes place. 
-    * This function is basically set up to guarantee behaviors after the transaction or to provide ESNrow functions. 
+    * This function is basically set up to guarantee behaviors after the transaction or to provide escrow functions. 
     * Most of the lock-in takes place due to the action chosen by the user, but some lock-ins are automatically given by the system. 
     * Types of lock-in defined by the user: preparation for transaction, auction, cancellable transfers
     * Types of lock-in defined by the system: block condition of the account, preparation for transaction approval
@@ -346,7 +348,7 @@ Our goal is the update of a new reward type contents forum in the fourth quarter
 
 ### Scope of reward program
 
-From its beginning, EtherSocial was created based on the collective intelligence of the forum and contributions made by an extensive range of participants even not only developers. Therefore EtherSocial includes a reward program for developers who participated in the development starting from coin distribution, marketing and for all other participants who have contributed to the improvement and development of blockchain and cryptocurrency. This does not necessarily have to be improvement of EtherSocial coin but includes active participation for the Crypto-Community Forum DDengle or our own development other than GitHub. These would include hardware or management software for mining, suggestions for actual use of existing coins, but are not related to profits. However, such reward programs exclude the development of new coins for the purpose of ICO. ICO itself is still closer to a profit-making model but has the possibility to be changed in the future. Detailed standards regarding the scope of the reward program are dESNribed as the following.
+From its beginning, EtherSocial was created based on the collective intelligence of the forum and contributions made by an extensive range of participants even not only developers. Therefore EtherSocial includes a reward program for developers who participated in the development starting from coin distribution, marketing and for all other participants who have contributed to the improvement and development of blockchain and cryptocurrency. This does not necessarily have to be improvement of EtherSocial coin but includes active participation for the Crypto-Community Forum DDengle or our own development other than GitHub. These would include hardware or management software for mining, suggestions for actual use of existing coins, but are not related to profits. However, such reward programs exclude the development of new coins for the purpose of ICO. ICO itself is still closer to a profit-making model but has the possibility to be changed in the future. Detailed standards regarding the scope of the reward program are described as the following.
 
 1. Contributors for the development of EtherSocial
     * Contributions to the development, modification and stabilization of sources for GitHub of EtherSocial
@@ -383,28 +385,27 @@ The challenges of EtherSocial are to assess the level of contribution on a fair 
 
 
 ## Roadmap
-    * The first ESN was mined on December 26, 2017.
-    * A beta test carried out by selecting members of the forum 'DDengle' on January 15, 2018.
-    * 5million coins allocated to the forum 'DDengle' in the fourth week of January 2018 
-      (to be used for the next ten years).
-    * The first ESN coin mining pool opened in the fourth week of January 2018.
-    * Direction of batch coin distribution announced to the members of 'DDengle' in the 
-      fourth week of January 2018.
-      (Existing member ratings and activity index reflected) 
-    * Formal launch of the EtherSocial coin in the fourth week of January 2018 (official launch).
-    * Additional coin distribution to members of 'DDengle' in February 2018.
-    * Release of official ESN White Paper in February 2018.
-    * Announcement for joint development with external forum based on ESN in March 2018 
-      (technological support for token development of external forum).
-    * Official announcement of APIs for the use of external forums in April 2018 
-      (application cases of DDengle etc.).
-    * Meetup to be held through the mining conference in April 2018.
-    * Launch of coins for the use in overseas forums in the third quarter of 2018.
-    * Listing of ESN on foreign exchanges in the third quarter of 2018.
-    * Launch of coins for two to three local and overseas external forums in the fourth quarter of 2018.
-    * Launch of integrated operational tool that combines forum and coins in the fourth quarter of 2018.
-    * Overseas launch of 'contents reward type forum' in the fourth quarter of 2018.
-
+1. The first ESN was mined on December 26, 2017.
+1. A beta test carried out by selecting members of the forum 'DDengle' on January 15, 2018.
+1. 5million coins allocated to the forum 'DDengle' in the fourth week of January 2018 
+   (to be used for the next ten years).
+1. The first ESN coin mining pool opened in the fourth week of January 2018.
+   Direction of batch coin distribution announced to the members of 'DDengle' in the 
+   fourth week of January 2018.
+   (Existing member ratings and activity index reflected) 
+1. Formal launch of the EtherSocial coin in the fourth week of January 2018 (official launch).
+1. Additional coin distribution to members of 'DDengle' in February 2018.
+1. Release of official ESN White Paper in February 2018.
+1. Announcement for joint development with external forum based on ESN in March 2018 
+   (technological support for token development of external forum).
+1. Official announcement of APIs for the use of external forums in April 2018 
+   (application cases of DDengle etc.).
+1. Meetup to be held through the mining conference in April 2018.
+1. Launch of coins for the use in overseas forums in the third quarter of 2018.
+1. Listing of ESN on foreign exchanges in the third quarter of 2018.
+1. Launch of coins for two to three local and overseas external forums in the fourth quarter of 2018.
+1. Launch of integrated operational tool that combines forum and coins in the fourth quarter of 2018.
+1. Overseas launch of 'contents reward type forum' in the fourth quarter of 2018.
 
 ## Other issues
 
@@ -443,7 +444,7 @@ The EtherSocial network has its own currency called 'ESN' which is used internal
 
 It will be easier to understand, if the above names are thought as extended concepts like 'dollars' and 'cents' of the American currency, or 'BTC' and 'Satoshi' of Bitcoin. Other names are not included in the client as of now.
 
-Currency issuance model:
+#### Currency issuance model:
 
 * ESN is used to financially support the EtherSocial organization, to collect funds necessary for development, to give salaries and rewards to developers and as an investment fund for various profit-making and non-profit projects related to EtherSocial.
 * In the beginning, 5,000,000 ESN are issued to be accumulated as a reserve for EtherSocial (DDengle) and are constantly distributed every year. Then, 8,000,000 ESN will be additionally issued to be reserved in the EtherSocial forum (DDengle) for collaboration and marketing of the forum. Again 36,922,490 EtherSocial will be additionally issued to be reserved for initial prior-to-launch donators and for development expenses of EtherSocial, and to be distributed to EtherSocial's development organization (Geminis).
@@ -456,15 +457,15 @@ The following explanation is about the legitimacy of the 'EtherSocial forum's re
 
 Legitimacy of the 'distribution to EtherSocial's development organization (Geminis)' can be explained as the following. Many development human resources, planning and marketing manpower are required to develop blockchain and various APIs as well as for repair and maintenance. As expenses are accompanied in running an organization, to cover such expenses, EtherSocial has to be distributed to the EtherSocial development organization. For legitimacy of the 'long-term reserve', the following explanation can be applied. This long-term reserve is not to be distributed to the market for at least one year (or more than a year). For the first one year, mining reward is 18,709,078 ESN, meaning that the proportion of the mined amount to the initially issued amount is much higher than other cryptocurrencies. However, if initial issuance is increased too much, then ESN may not become a widely used cryptocurrency. Therefore, initial issuance should be kept at a level lower than the half of Ethereum but not too low, and distribution for the first one year should be prohibited. 
 
-** Summary
+#### Summary
 * Forum Distribution : Ddengle 5,000,000 ESN, external relations 8,000,00 ESN
 * Developer’s reward : 36,000,000 ESN
 * Early development and mining contributors : 922,490 ESN
 * Total : 49,922,490 ESN
 
 
-** For comparison
-* Initial issuance of Ethereum is 70,002,436 ETH and mining reward for the first one year is 15,626,576 ETH**
+#### For comparison
+* Initial issuance of Ethereum is 70,002,436 ETH and mining reward for the first one year is 15,626,576 ETH
 * Initial issuance of EtherSocial is 49,922,490 ESN and mining reward for the first one year is 18,709,078 ESN. Afterwards, mining reward per year would be 15,626,576 ESN. 
 
 
@@ -490,10 +491,10 @@ However, at some point, ASICs designed for Ethereum mining can be released. Ther
 
 ## Conclusion
 
-EtherSocial provides token management tools that comply with the general-purpose ERC 20 rules based on smart contract, as well as APIs that can easily be combined with various services. EtherSocial also provides administrator management tools that enable applications with 'ESNrow, setup of withdrawal limit, financial contracts and other advanced functions' to be used in various services through a very general programming language. EtherSocial also provides support to theoretically create all types of transfer methods or applications through the turing-complete language. Through these features, forum hosts or administrators of all services that have accounts can use these services more easily and universally.
+EtherSocial provides token management tools that comply with the general-purpose ERC 20 rules based on smart contract, as well as APIs that can easily be combined with various services. EtherSocial also provides administrator management tools that enable applications with 'escrow, setup of withdrawal limit, financial contracts and other advanced functions' to be used in various services through a very general programming language. EtherSocial also provides support to theoretically create all types of transfer methods or applications through the turing-complete language. Through these features, forum hosts or administrators of all services that have accounts can use these services more easily and universally.
 
 
-## Reference
+## References
 1. Bitcoin Whitepaper https://bitcoin.org/bitcoin.pdf
 2. Ethereum Whitepaper https://github.com/ethereum/wiki/wiki/White-Paper
 3. Steem Whitepaper https://steem.io/SteemWhitePaper.pdf
