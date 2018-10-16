@@ -447,21 +447,28 @@ It will be easier to understand, if the above names are thought as extended conc
 #### Currency issuance model:
 
 * ESN is used to financially support the EtherSocial organization, to collect funds necessary for development, to give salaries and rewards to developers and as an investment fund for various profit-making and non-profit projects related to EtherSocial.
-* In the beginning, 5,000,000 ESN are issued to be accumulated as a reserve for EtherSocial (DDengle) and are constantly distributed every year. Then, 8,000,000 ESN will be additionally issued to be reserved in the EtherSocial forum (DDengle) for collaboration and marketing of the forum. Again 36,922,490 EtherSocial will be additionally issued to be reserved for initial prior-to-launch donators and for development expenses of EtherSocial, and to be distributed to EtherSocial's development organization (Geminis).
-* 0.5 times of the coins distributed to EtherSocial's development organization will be issued additionally as a long-term reserve of EtherSocial's development organization and not to be used for one year.
+![](https://ethersocial.org/images/esn_chart_eng.png)
+* Initial EtherSocial amount which has been secured before making public was owned by the ‘Development Team(Geminis)’ and the total amount was about 49 million ESN. This amount is divided into Holding Amount and Circulating Amount, Holding Amount is long-term internal ESN for Development Team, and Circulating Amount is for public circulation towards general users.
+
+
+#### ※ Holding Amount
+* Holding Amount is 17 million ESN, which is 35% of the total amount, and it is used for ‘Development Team’, ‘Reserve’, ‘Legal’. ESN allocated for ‘Development Team’ can be used directly for ESN core and ecosystem development and supports by the development team, which is about 10 million ESN. It corresponds to 20% of the total amount.
+* Among ‘Holding Amount’, the Reserve is 5 million ESN, which is about 10% of the total amount. The reserve will be kept for a long period, and if an unexpected situation happens, this amount can be used. Besides, Legal 2 million ESN, which is about 5% of the total amount, will be used for such as legal advisory expenses.
+
+
+#### ※ Circulating Amount
+* Circulating Amount is about 32 million ESN, which is 65% of the total amount. This amount will be circulated externally. As for Marketing, 9 million ESN, which is 18% of the total amount, can be used as marketing expenses such as active advertisement and promotion. 5 million ESN, which is about 10% of the total amount will be allocated and so more users will use ESN.
+* Bounty means ESN rewards for special mission participants or contributors of development and design. 5 million ESN, which is about 10% of total ESN is allocated for ESN development and spread. Ninefinney holds 13 million ESN, which is 27% of the total amount, can be exchanged by Ethereum. Also Ninefinney will take a role as an ESN’s agent for overseas expansion.
+
+
+#### ※ ESN supply after initial issuance.
 * After the time of mining, 18,709,078 ESN are newly issued for the first one year and after that every year a total of 15,626,576 ESN are newly issued to miners.
 * After that, depending on the level of block and mining difficulty, mining amount can gradually decrease.
 * Mining algorithm can be changed by developers depending on the level of mining difficulty and the use of a mining equipment.
 
-The following explanation is about the legitimacy of the 'EtherSocial forum's reserve'. For example, EtherSocial can be constantly distributed every year for ten years and contribute to increasing the user base. A certain portion will be distributed according to the contributions of the forum's members and another portion can be distributed through specific events. Also, EtherSocial can be distributed if necessary, as a basic asset for using EtherSocial tokens in other forums or websites. If there is no such reserve, EtherSocial cannot be easily acquired and the user base will inevitably become smaller. 
+The following explanation is about the legitimacy of the 'EtherSocial forum's reserve'. For example, EtherSocial can be constantly distributed every year for ten years and contribute to increasing the user base. A certain portion will be distributed according to the contributions of the forum's members and another portion can be distributed through specific events. Also, EtherSocial can be distributed if necessary, as a basic asset for using EtherSocial tokens in other forums or websites. If there is no such reserve, EtherSocial cannot be easily acquired and the user base will inevitably become smaller.
 
-Legitimacy of the 'distribution to EtherSocial's development organization (Geminis)' can be explained as the following. Many development human resources, planning and marketing manpower are required to develop blockchain and various APIs as well as for repair and maintenance. As expenses are accompanied in running an organization, to cover such expenses, EtherSocial has to be distributed to the EtherSocial development organization. For legitimacy of the 'long-term reserve', the following explanation can be applied. This long-term reserve is not to be distributed to the market for at least one year (or more than a year). For the first one year, mining reward is 18,709,078 ESN, meaning that the proportion of the mined amount to the initially issued amount is much higher than other cryptocurrencies. However, if initial issuance is increased too much, then ESN may not become a widely used cryptocurrency. Therefore, initial issuance should be kept at a level lower than the half of Ethereum but not too low, and distribution for the first one year should be prohibited. 
-
-#### Summary
-* Forum Distribution : Ddengle 5,000,000 ESN, external relations 8,000,00 ESN
-* Developer’s reward : 36,000,000 ESN
-* Early development and mining contributors : 922,490 ESN
-* Total : 49,922,490 ESN
+Legitimacy of the 'distribution to EtherSocial's development organization (Geminis)' can be explained as the following. Many development human resources, planning and marketing manpower are required to develop blockchain and various APIs as well as for repair and maintenance. As expenses are accompanied in running an organization, to cover such expenses, EtherSocial has to be distributed to the EtherSocial development organization. For legitimacy of the 'long-term reserve', the following explanation can be applied. This long-term reserve is not to be distributed to the market for at least one year (or more than a year). For the first one year, mining reward is 18,709,078 ESN, meaning that the proportion of the mined amount to the initially issued amount is much higher than other cryptocurrencies. However, if initial issuance is increased too much, then ESN may not become a widely used cryptocurrency. Therefore, initial issuance should be kept at a level lower than the half of Ethereum but not too low, and distribution for the first one year should be prohibited.
 
 
 #### For comparison
