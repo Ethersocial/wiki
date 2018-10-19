@@ -446,19 +446,19 @@ It will be easier to understand, if the above names are thought as extended conc
 
 #### Currency issuance model:
 
-* ESN is used to financially support the EtherSocial organization, to collect funds necessary for development, to give salaries and rewards to developers and as an investment fund for various profit-making and non-profit projects related to EtherSocial.
+* ESN is used to financially support the EtherSocial organization, to collect funds necessary for development, to give rewards to developers and as an investment fund for various profit-making and non-profit projects related to EtherSocial.
 ![](https://ethersocial.org/images/esn_chart_eng.png)
 * Initial EtherSocial amount which has been secured before making public was owned by the ‘Development Team(Geminis)’ and the total amount was about 49 million ESN. This amount is divided into Holding Amount and Circulating Amount, Holding Amount is long-term internal ESN for Development Team, and Circulating Amount is for public circulation towards general users.
 
 
 #### ※ Holding Amount
-* Holding Amount is 17 million ESN, which is 35% of the total amount, and it is used for ‘Development Team’, ‘Reserve’, ‘Legal’. ESN allocated for ‘Development Team’ can be used directly for ESN core and ecosystem development and supports by the development team, which is about 10 million ESN. It corresponds to 20% of the total amount.
-* Among ‘Holding Amount’, the Reserve is 5 million ESN, which is about 10% of the total amount. The reserve will be kept for a long period, and if an unexpected situation happens, this amount can be used. Besides, Legal 2 million ESN, which is about 5% of the total amount, will be used for such as legal advisory expenses.
+* Holding Amount is 35% of the total amount, and it is used for ‘Development’, ‘Reserve’, and ‘Legal’. ESN allocated for ‘Development’ can be used directly for ESN core and ecosystem development and supports the development team, which is about 20% of the total amount.
+* Among ‘Holding Amount’, the Reserve is about 10% of the total amount. The reserve will be kept for a long period, and if an unexpected situation happens, this amount can be used. Besides, ‘Legal’ amount, which is about 5% of the total amount, will be used for such as legal advisory expenses.
 
 
 #### ※ Circulating Amount
-* Circulating Amount is about 32 million ESN, which is 65% of the total amount. This amount will be circulated externally. As for Marketing, 9 million ESN, which is 18% of the total amount, can be used as marketing expenses such as active advertisement and promotion. 5 million ESN, which is about 10% of the total amount will be allocated and so more users will use ESN.
-* Bounty means ESN rewards for special mission participants or contributors of development and design. 5 million ESN, which is about 10% of total ESN is allocated for ESN development and spread. Ninefinney holds 13 million ESN, which is 27% of the total amount, can be exchanged by Ethereum. Also Ninefinney will take a role as an ESN’s agent for overseas expansion.
+* Circulating Amount is about 65% of the total amount. This amount will be circulated externally. As for Marketing, 38% of the total amount, can be used as marketing expenses such as active advertisement and promotion. For community and airdrop, about 10% of the total amount will be allocated and so more users will use ESN.
+* ‘Bounty’ means ESN rewards for special mission participants or contributors of development and design. It is also about 10% of total ESN is allocated for ESN development and spread. ‘Private’ amount, which is 7% of the total amount, can be exchanged by Ethereum.
 
 
 #### ※ ESN supply after initial issuance.
