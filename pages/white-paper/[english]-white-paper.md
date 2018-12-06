@@ -447,7 +447,7 @@ It will be easier to understand, if the above names are thought as extended conc
 #### Currency issuance model:
 
 * ESN is used to financially support the EtherSocial organization, to collect funds necessary for development, to give rewards to developers and as an investment fund for various profit-making and non-profit projects related to EtherSocial.
-![](https://ethersocial.org/images/esn_chart_eng.png)
+![](https://ethersocial.org/images/esnallo_en.png)
 * Initial EtherSocial amount which has been secured before making public was owned by the ‘Development Team(Geminis)’ and the initial supply amount is 49 million ESN. This amount is divided into Holding Amount and Circulating Amount, Holding Amount is long-term internal ESN for Development Team, and Circulating Amount is for public circulation towards general users.
 
 
